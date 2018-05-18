@@ -3,6 +3,10 @@ use_frameworks!
 
 target 'GoogleBooks' do
 
+  # Dependency managment
+  pod 'EasyDi'
+
+  # Tools
   pod 'SwiftLint'
 
   target 'GoogleBooksTests' do
