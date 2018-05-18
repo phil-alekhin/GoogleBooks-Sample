@@ -56,6 +56,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D4972D1720AF473C006E5144 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				D49ADAA120AF41AD0093F36D /* ViewController.swift */,
+				D49ADAA320AF41AD0093F36D /* Main.storyboard */,
+				D49ADAA820AF41AE0093F36D /* LaunchScreen.storyboard */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		D4972D1820AF4785006E5144 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D49ADAB620AF41AE0093F36D /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D49ADA9320AF41AD0093F36D = {
 			isa = PBXGroup;
 			children = (
@@ -77,12 +95,9 @@
 		D49ADA9E20AF41AD0093F36D /* GoogleBooks */ = {
 			isa = PBXGroup;
 			children = (
-				D49ADA9F20AF41AD0093F36D /* AppDelegate.swift */,
-				D49ADAA120AF41AD0093F36D /* ViewController.swift */,
-				D49ADAA320AF41AD0093F36D /* Main.storyboard */,
-				D49ADAA620AF41AE0093F36D /* Assets.xcassets */,
-				D49ADAA820AF41AE0093F36D /* LaunchScreen.storyboard */,
-				D49ADAAB20AF41AE0093F36D /* Info.plist */,
+				D49ADABF20AF45FB0093F36D /* Classes */,
+				D49ADAC020AF46000093F36D /* Resources */,
+				D49ADAC120AF46060093F36D /* Supporting Files */,
 			);
 			path = GoogleBooks;
 			sourceTree = "<group>";
@@ -90,10 +105,43 @@
 		D49ADAB320AF41AE0093F36D /* GoogleBooksTests */ = {
 			isa = PBXGroup;
 			children = (
+				D4972D1820AF4785006E5144 /* Supporting Files */,
 				D49ADAB420AF41AE0093F36D /* GoogleBooksTests.swift */,
-				D49ADAB620AF41AE0093F36D /* Info.plist */,
 			);
 			path = GoogleBooksTests;
+			sourceTree = "<group>";
+		};
+		D49ADABF20AF45FB0093F36D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D4972D1720AF473C006E5144 /* PresentationLayer */,
+				D49ADAC420AF471D0093F36D /* ApplicationLayer */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D49ADAC020AF46000093F36D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D49ADAA620AF41AE0093F36D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D49ADAC120AF46060093F36D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D49ADAAB20AF41AE0093F36D /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D49ADAC420AF471D0093F36D /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				D49ADA9F20AF41AD0093F36D /* AppDelegate.swift */,
+			);
+			path = ApplicationLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,7 +408,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = GoogleBooks/Info.plist;
+				INFOPLIST_FILE = "GoogleBooks/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -380,7 +428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = GoogleBooks/Info.plist;
+				INFOPLIST_FILE = "GoogleBooks/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -400,7 +448,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GoogleBooksTests/Info.plist;
+				INFOPLIST_FILE = "GoogleBooksTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -420,7 +468,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GoogleBooksTests/Info.plist;
+				INFOPLIST_FILE = "GoogleBooksTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
