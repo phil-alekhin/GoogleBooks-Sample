@@ -22,6 +22,8 @@
 		D444D6F620B08180003F4BC9 /* JSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D6F520B08180003F4BC9 /* JSONMapper.swift */; };
 		D444D6F920B086D5003F4BC9 /* ComponentAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D6F820B086D5003F4BC9 /* ComponentAssembly.swift */; };
 		D444D6FC20B08876003F4BC9 /* GatewayAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D6FB20B08876003F4BC9 /* GatewayAssembly.swift */; };
+		D444D70020B08994003F4BC9 /* BooksGatewayImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D6FF20B08994003F4BC9 /* BooksGatewayImplTests.swift */; };
+		D444D70320B08C79003F4BC9 /* BooksGatewayImplTests.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D444D70220B08C79003F4BC9 /* BooksGatewayImplTests.bundle */; };
 		D4951C7B20AF51EA00007A01 /* GetBooksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4951C7A20AF51EA00007A01 /* GetBooksUseCase.swift */; };
 		D4951C7E20AF57EE00007A01 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4951C7D20AF57EE00007A01 /* Book.swift */; };
 		D49ADAA020AF41AD0093F36D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA9F20AF41AD0093F36D /* AppDelegate.swift */; };
@@ -64,6 +66,8 @@
 		D444D6F520B08180003F4BC9 /* JSONMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMapper.swift; sourceTree = "<group>"; };
 		D444D6F820B086D5003F4BC9 /* ComponentAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentAssembly.swift; sourceTree = "<group>"; };
 		D444D6FB20B08876003F4BC9 /* GatewayAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayAssembly.swift; sourceTree = "<group>"; };
+		D444D6FF20B08994003F4BC9 /* BooksGatewayImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksGatewayImplTests.swift; sourceTree = "<group>"; };
+		D444D70220B08C79003F4BC9 /* BooksGatewayImplTests.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BooksGatewayImplTests.bundle; sourceTree = "<group>"; };
 		D4951C7A20AF51EA00007A01 /* GetBooksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBooksUseCase.swift; sourceTree = "<group>"; };
 		D4951C7D20AF57EE00007A01 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		D49ADA9C20AF41AD0093F36D /* GoogleBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,6 +258,31 @@
 			path = Assemblies;
 			sourceTree = "<group>";
 		};
+		D444D6FD20B08969003F4BC9 /* BusinessLogicLayer */ = {
+			isa = PBXGroup;
+			children = (
+				D444D6FE20B0897D003F4BC9 /* Gateways */,
+			);
+			path = BusinessLogicLayer;
+			sourceTree = "<group>";
+		};
+		D444D6FE20B0897D003F4BC9 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				D444D70120B08C47003F4BC9 /* BooksGateway */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		D444D70120B08C47003F4BC9 /* BooksGateway */ = {
+			isa = PBXGroup;
+			children = (
+				D444D6FF20B08994003F4BC9 /* BooksGatewayImplTests.swift */,
+				D444D70220B08C79003F4BC9 /* BooksGatewayImplTests.bundle */,
+			);
+			path = BooksGateway;
+			sourceTree = "<group>";
+		};
 		D4951C7820AF519300007A01 /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +362,7 @@
 		D49ADAB320AF41AE0093F36D /* GoogleBooksTests */ = {
 			isa = PBXGroup;
 			children = (
+				D444D6FD20B08969003F4BC9 /* BusinessLogicLayer */,
 				D4197B9420B070300031146D /* CoreLayerTests */,
 				D4972D1820AF4785006E5144 /* Supporting Files */,
 				D49ADAB420AF41AE0093F36D /* GoogleBooksTests.swift */,
@@ -426,6 +456,7 @@
 				D49ADAAC20AF41AE0093F36D /* Sources */,
 				D49ADAAD20AF41AE0093F36D /* Frameworks */,
 				D49ADAAE20AF41AE0093F36D /* Resources */,
+				133F5B10900235FB063BC9F6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -490,12 +521,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D444D70320B08C79003F4BC9 /* BooksGatewayImplTests.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		133F5B10900235FB063BC9F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GoogleBooksTests/Pods-GoogleBooksTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleBooksTests/Pods-GoogleBooksTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2916C4BCFD5EBC7A281C9D64 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -598,6 +648,7 @@
 			files = (
 				D4197B9720B070760031146D /* RESTRequestConfiguratorTests.swift in Sources */,
 				D49ADAB520AF41AE0093F36D /* GoogleBooksTests.swift in Sources */,
+				D444D70020B08994003F4BC9 /* BooksGatewayImplTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
