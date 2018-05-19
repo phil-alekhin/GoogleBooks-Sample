@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		97768A835E66BB7D650A56B3 /* Pods_GoogleBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89A37EC8C6E66A808D03549 /* Pods_GoogleBooks.framework */; };
 		D4197B7820B064910031146D /* BooksGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4197B7720B064910031146D /* BooksGateway.swift */; };
+		D4197B7D20B06A500031146D /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4197B7C20B06A500031146D /* NetworkClient.swift */; };
+		D4197B8020B06A770031146D /* ServerResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4197B7F20B06A770031146D /* ServerResponseModel.swift */; };
+		D4197B8320B06AB10031146D /* CommonNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4197B8220B06AB10031146D /* CommonNetworkClient.swift */; };
 		D4951C7B20AF51EA00007A01 /* GetBooksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4951C7A20AF51EA00007A01 /* GetBooksUseCase.swift */; };
 		D4951C7E20AF57EE00007A01 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4951C7D20AF57EE00007A01 /* Book.swift */; };
 		D49ADAA020AF41AD0093F36D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA9F20AF41AD0093F36D /* AppDelegate.swift */; };
@@ -38,6 +41,9 @@
 		A61F054CB4AF2A83FA54C80C /* Pods-GoogleBooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleBooks.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleBooks/Pods-GoogleBooks.release.xcconfig"; sourceTree = "<group>"; };
 		A6F42C4CCB6B15E9640A0713 /* Pods-GoogleBooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleBooks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleBooks/Pods-GoogleBooks.debug.xcconfig"; sourceTree = "<group>"; };
 		D4197B7720B064910031146D /* BooksGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksGateway.swift; sourceTree = "<group>"; };
+		D4197B7C20B06A500031146D /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		D4197B7F20B06A770031146D /* ServerResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponseModel.swift; sourceTree = "<group>"; };
+		D4197B8220B06AB10031146D /* CommonNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonNetworkClient.swift; sourceTree = "<group>"; };
 		D4951C7A20AF51EA00007A01 /* GetBooksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBooksUseCase.swift; sourceTree = "<group>"; };
 		D4951C7D20AF57EE00007A01 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		D49ADA9C20AF41AD0093F36D /* GoogleBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +103,48 @@
 				D4197B7720B064910031146D /* BooksGateway.swift */,
 			);
 			path = BooksGateway;
+			sourceTree = "<group>";
+		};
+		D4197B7920B06A050031146D /* CoreLayer */ = {
+			isa = PBXGroup;
+			children = (
+				D4197B7A20B06A2E0031146D /* Components */,
+			);
+			path = CoreLayer;
+			sourceTree = "<group>";
+		};
+		D4197B7A20B06A2E0031146D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D4197B7B20B06A350031146D /* NetworkClient */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D4197B7B20B06A350031146D /* NetworkClient */ = {
+			isa = PBXGroup;
+			children = (
+				D4197B8120B06A9D0031146D /* Implementations */,
+				D4197B7E20B06A640031146D /* Models */,
+				D4197B7C20B06A500031146D /* NetworkClient.swift */,
+			);
+			path = NetworkClient;
+			sourceTree = "<group>";
+		};
+		D4197B7E20B06A640031146D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D4197B7F20B06A770031146D /* ServerResponseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D4197B8120B06A9D0031146D /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				D4197B8220B06AB10031146D /* CommonNetworkClient.swift */,
+			);
+			path = Implementations;
 			sourceTree = "<group>";
 		};
 		D4951C7820AF519300007A01 /* BusinessLogicLayer */ = {
@@ -186,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				D4951C7C20AF575100007A01 /* Entities */,
+				D4197B7920B06A050031146D /* CoreLayer */,
 				D4951C7820AF519300007A01 /* BusinessLogicLayer */,
 				D4972D1720AF473C006E5144 /* PresentationLayer */,
 				D49ADAC420AF471D0093F36D /* ApplicationLayer */,
@@ -413,9 +462,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4951C7E20AF57EE00007A01 /* Book.swift in Sources */,
+				D4197B8320B06AB10031146D /* CommonNetworkClient.swift in Sources */,
 				D4FE286F20B05F22006BD145 /* Result.swift in Sources */,
 				D4951C7B20AF51EA00007A01 /* GetBooksUseCase.swift in Sources */,
+				D4197B8020B06A770031146D /* ServerResponseModel.swift in Sources */,
 				D49ADAA220AF41AD0093F36D /* ViewController.swift in Sources */,
+				D4197B7D20B06A500031146D /* NetworkClient.swift in Sources */,
 				D49ADAA020AF41AD0093F36D /* AppDelegate.swift in Sources */,
 				D4197B7820B064910031146D /* BooksGateway.swift in Sources */,
 			);
