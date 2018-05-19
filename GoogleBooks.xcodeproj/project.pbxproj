@@ -32,6 +32,8 @@
 		D444D71620B0C1B0003F4BC9 /* BookListPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D71520B0C1B0003F4BC9 /* BookListPresenterImpl.swift */; };
 		D444D71820B0C1FE003F4BC9 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D71720B0C1FE003F4BC9 /* BookListView.swift */; };
 		D444D71B20B0C34A003F4BC9 /* BookListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D71A20B0C34A003F4BC9 /* BookListAssembly.swift */; };
+		D444D72020B0C4F8003F4BC9 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D71E20B0C4F8003F4BC9 /* BookTableViewCell.swift */; };
+		D444D72120B0C4F8003F4BC9 /* BookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D444D71F20B0C4F8003F4BC9 /* BookTableViewCell.xib */; };
 		D4951C7B20AF51EA00007A01 /* GetBooksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4951C7A20AF51EA00007A01 /* GetBooksUseCase.swift */; };
 		D4951C7E20AF57EE00007A01 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4951C7D20AF57EE00007A01 /* Book.swift */; };
 		D49ADAA020AF41AD0093F36D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA9F20AF41AD0093F36D /* AppDelegate.swift */; };
@@ -82,6 +84,8 @@
 		D444D71520B0C1B0003F4BC9 /* BookListPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListPresenterImpl.swift; sourceTree = "<group>"; };
 		D444D71720B0C1FE003F4BC9 /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
 		D444D71A20B0C34A003F4BC9 /* BookListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListAssembly.swift; sourceTree = "<group>"; };
+		D444D71E20B0C4F8003F4BC9 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
+		D444D71F20B0C4F8003F4BC9 /* BookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookTableViewCell.xib; sourceTree = "<group>"; };
 		D4951C7A20AF51EA00007A01 /* GetBooksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBooksUseCase.swift; sourceTree = "<group>"; };
 		D4951C7D20AF57EE00007A01 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		D49ADA9C20AF41AD0093F36D /* GoogleBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -342,6 +346,7 @@
 		D444D70F20B0BF73003F4BC9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D444D71C20B0C4DB003F4BC9 /* Cells */,
 				D444D71020B0BF86003F4BC9 /* BookListViewController.swift */,
 				D444D71720B0C1FE003F4BC9 /* BookListView.swift */,
 			);
@@ -363,6 +368,23 @@
 				D444D71A20B0C34A003F4BC9 /* BookListAssembly.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		D444D71C20B0C4DB003F4BC9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D444D71D20B0C4E3003F4BC9 /* BookCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D444D71D20B0C4E3003F4BC9 /* BookCell */ = {
+			isa = PBXGroup;
+			children = (
+				D444D71E20B0C4F8003F4BC9 /* BookTableViewCell.swift */,
+				D444D71F20B0C4F8003F4BC9 /* BookTableViewCell.xib */,
+			);
+			path = BookCell;
 			sourceTree = "<group>";
 		};
 		D4951C7820AF519300007A01 /* BusinessLogicLayer */ = {
@@ -597,6 +619,7 @@
 				D444D70E20B0BF56003F4BC9 /* BookList.storyboard in Resources */,
 				D49ADAA720AF41AE0093F36D /* Assets.xcassets in Resources */,
 				D49ADAA520AF41AD0093F36D /* Main.storyboard in Resources */,
+				D444D72120B0C4F8003F4BC9 /* BookTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,6 +750,7 @@
 				D4197B9020B06F000031146D /* HTTPMethod.swift in Sources */,
 				D49ADAA020AF41AD0093F36D /* AppDelegate.swift in Sources */,
 				D4197B7820B064910031146D /* BooksGateway.swift in Sources */,
+				D444D72020B0C4F8003F4BC9 /* BookTableViewCell.swift in Sources */,
 				D444D71120B0BF86003F4BC9 /* BookListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
