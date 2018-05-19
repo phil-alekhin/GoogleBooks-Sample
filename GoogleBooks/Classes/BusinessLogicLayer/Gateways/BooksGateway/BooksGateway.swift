@@ -6,13 +6,13 @@
 //  Copyright © 2018 Philip Alekhin. All rights reserved.
 //
 
-typealias GetBooksGatewayCompletionHandler = (Result<[Book]>) -> Void
+typealias BooksGatewayCompletionHandler = (Result<[Book]>) -> Void
 
-protocol GetBooksGateway {
+protocol BooksGateway {
     /// Obtains book list by sending request to server
     ///
     /// - parameters:
     ///     - queryString: Search query string
     ///     - completionHandler: Block called upon completion the method, and returns Error if there is any
-    func obtainBookList(queryString: String, completionHandler: @escaping GetBooksGatewayCompletionHandler)
+    func obtainBookList(queryString: String, completionHandler: @escaping BooksGatewayCompletionHandler)
 }
