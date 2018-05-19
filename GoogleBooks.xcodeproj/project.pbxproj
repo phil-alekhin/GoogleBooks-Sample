@@ -24,6 +24,8 @@
 		D444D6FC20B08876003F4BC9 /* GatewayAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D6FB20B08876003F4BC9 /* GatewayAssembly.swift */; };
 		D444D70020B08994003F4BC9 /* BooksGatewayImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D6FF20B08994003F4BC9 /* BooksGatewayImplTests.swift */; };
 		D444D70320B08C79003F4BC9 /* BooksGatewayImplTests.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D444D70220B08C79003F4BC9 /* BooksGatewayImplTests.bundle */; };
+		D444D70520B0BC4E003F4BC9 /* GetBooksUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D70420B0BC4E003F4BC9 /* GetBooksUseCaseImpl.swift */; };
+		D444D70720B0BCCE003F4BC9 /* UseCaseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D70620B0BCCE003F4BC9 /* UseCaseAssembly.swift */; };
 		D4951C7B20AF51EA00007A01 /* GetBooksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4951C7A20AF51EA00007A01 /* GetBooksUseCase.swift */; };
 		D4951C7E20AF57EE00007A01 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4951C7D20AF57EE00007A01 /* Book.swift */; };
 		D49ADAA020AF41AD0093F36D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA9F20AF41AD0093F36D /* AppDelegate.swift */; };
@@ -68,6 +70,8 @@
 		D444D6FB20B08876003F4BC9 /* GatewayAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayAssembly.swift; sourceTree = "<group>"; };
 		D444D6FF20B08994003F4BC9 /* BooksGatewayImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksGatewayImplTests.swift; sourceTree = "<group>"; };
 		D444D70220B08C79003F4BC9 /* BooksGatewayImplTests.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BooksGatewayImplTests.bundle; sourceTree = "<group>"; };
+		D444D70420B0BC4E003F4BC9 /* GetBooksUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBooksUseCaseImpl.swift; sourceTree = "<group>"; };
+		D444D70620B0BCCE003F4BC9 /* UseCaseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseAssembly.swift; sourceTree = "<group>"; };
 		D4951C7A20AF51EA00007A01 /* GetBooksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBooksUseCase.swift; sourceTree = "<group>"; };
 		D4951C7D20AF57EE00007A01 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		D49ADA9C20AF41AD0093F36D /* GoogleBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				D444D6FB20B08876003F4BC9 /* GatewayAssembly.swift */,
+				D444D70620B0BCCE003F4BC9 /* UseCaseAssembly.swift */,
 			);
 			path = Assemblies;
 			sourceTree = "<group>";
@@ -410,6 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				D4951C7A20AF51EA00007A01 /* GetBooksUseCase.swift */,
+				D444D70420B0BC4E003F4BC9 /* GetBooksUseCaseImpl.swift */,
 			);
 			path = GetBooksUseCase;
 			sourceTree = "<group>";
@@ -626,6 +632,7 @@
 				D444D6F020B074F5003F4BC9 /* BookListResponse.swift in Sources */,
 				D4197B8D20B06E5E0031146D /* RequestDataModel.swift in Sources */,
 				D4951C7E20AF57EE00007A01 /* Book.swift in Sources */,
+				D444D70720B0BCCE003F4BC9 /* UseCaseAssembly.swift in Sources */,
 				D4197B8320B06AB10031146D /* CommonNetworkClient.swift in Sources */,
 				D444D6F920B086D5003F4BC9 /* ComponentAssembly.swift in Sources */,
 				D444D6ED20B07232003F4BC9 /* BooksGatewayImpl.swift in Sources */,
@@ -633,6 +640,7 @@
 				D4FE286F20B05F22006BD145 /* Result.swift in Sources */,
 				D444D6F620B08180003F4BC9 /* JSONMapper.swift in Sources */,
 				D4951C7B20AF51EA00007A01 /* GetBooksUseCase.swift in Sources */,
+				D444D70520B0BC4E003F4BC9 /* GetBooksUseCaseImpl.swift in Sources */,
 				D4197B8020B06A770031146D /* ServerResponseModel.swift in Sources */,
 				D49ADAA220AF41AD0093F36D /* ViewController.swift in Sources */,
 				D4197B7D20B06A500031146D /* NetworkClient.swift in Sources */,
