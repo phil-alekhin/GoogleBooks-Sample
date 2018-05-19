@@ -1,6 +1,9 @@
 excluded:
   - Pods
 
+nesting:
+    type_level: 2
+
 line_length: 140
 
 identifier_name:
