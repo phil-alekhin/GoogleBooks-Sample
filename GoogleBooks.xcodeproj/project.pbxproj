@@ -33,7 +33,6 @@
 		D49ADAA520AF41AD0093F36D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49ADAA320AF41AD0093F36D /* Main.storyboard */; };
 		D49ADAA720AF41AE0093F36D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D49ADAA620AF41AE0093F36D /* Assets.xcassets */; };
 		D49ADAAA20AF41AE0093F36D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49ADAA820AF41AE0093F36D /* LaunchScreen.storyboard */; };
-		D49ADAB520AF41AE0093F36D /* GoogleBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADAB420AF41AE0093F36D /* GoogleBooksTests.swift */; };
 		D4FE286F20B05F22006BD145 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE286E20B05F22006BD145 /* Result.swift */; };
 		DD8A65F00C9A9C587576BAAA /* Pods_GoogleBooksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 197282DCA0141609A2288D5D /* Pods_GoogleBooksTests.framework */; };
 /* End PBXBuildFile section */
@@ -82,7 +81,6 @@
 		D49ADAA920AF41AE0093F36D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D49ADAAB20AF41AE0093F36D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D49ADAB020AF41AE0093F36D /* GoogleBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D49ADAB420AF41AE0093F36D /* GoogleBooksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksTests.swift; sourceTree = "<group>"; };
 		D49ADAB620AF41AE0093F36D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4FE286E20B05F22006BD145 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		E89A37EC8C6E66A808D03549 /* Pods_GoogleBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -370,7 +368,6 @@
 				D444D6FD20B08969003F4BC9 /* BusinessLogicLayer */,
 				D4197B9420B070300031146D /* CoreLayerTests */,
 				D4972D1820AF4785006E5144 /* Supporting Files */,
-				D49ADAB420AF41AE0093F36D /* GoogleBooksTests.swift */,
 			);
 			path = GoogleBooksTests;
 			sourceTree = "<group>";
@@ -655,7 +652,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4197B9720B070760031146D /* RESTRequestConfiguratorTests.swift in Sources */,
-				D49ADAB520AF41AE0093F36D /* GoogleBooksTests.swift in Sources */,
 				D444D70020B08994003F4BC9 /* BooksGatewayImplTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
