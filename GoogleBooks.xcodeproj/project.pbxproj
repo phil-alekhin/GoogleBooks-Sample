@@ -17,6 +17,9 @@
 		D4197B9020B06F000031146D /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4197B8F20B06F000031146D /* HTTPMethod.swift */; };
 		D4197B9320B06FE60031146D /* RESTRequestConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4197B9220B06FE60031146D /* RESTRequestConfigurator.swift */; };
 		D4197B9720B070760031146D /* RESTRequestConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4197B9620B070760031146D /* RESTRequestConfiguratorTests.swift */; };
+		D444D6ED20B07232003F4BC9 /* BooksGatewayImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D6EC20B07232003F4BC9 /* BooksGatewayImpl.swift */; };
+		D444D6F020B074F5003F4BC9 /* BookListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D6EF20B074F5003F4BC9 /* BookListResponse.swift */; };
+		D444D6F620B08180003F4BC9 /* JSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D6F520B08180003F4BC9 /* JSONMapper.swift */; };
 		D4951C7B20AF51EA00007A01 /* GetBooksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4951C7A20AF51EA00007A01 /* GetBooksUseCase.swift */; };
 		D4951C7E20AF57EE00007A01 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4951C7D20AF57EE00007A01 /* Book.swift */; };
 		D49ADAA020AF41AD0093F36D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA9F20AF41AD0093F36D /* AppDelegate.swift */; };
@@ -54,6 +57,9 @@
 		D4197B8F20B06F000031146D /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		D4197B9220B06FE60031146D /* RESTRequestConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTRequestConfigurator.swift; sourceTree = "<group>"; };
 		D4197B9620B070760031146D /* RESTRequestConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTRequestConfiguratorTests.swift; sourceTree = "<group>"; };
+		D444D6EC20B07232003F4BC9 /* BooksGatewayImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksGatewayImpl.swift; sourceTree = "<group>"; };
+		D444D6EF20B074F5003F4BC9 /* BookListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListResponse.swift; sourceTree = "<group>"; };
+		D444D6F520B08180003F4BC9 /* JSONMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMapper.swift; sourceTree = "<group>"; };
 		D4951C7A20AF51EA00007A01 /* GetBooksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBooksUseCase.swift; sourceTree = "<group>"; };
 		D4951C7D20AF57EE00007A01 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		D49ADA9C20AF41AD0093F36D /* GoogleBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				D4197B7720B064910031146D /* BooksGateway.swift */,
+				D444D6EC20B07232003F4BC9 /* BooksGatewayImpl.swift */,
 			);
 			path = BooksGateway;
 			sourceTree = "<group>";
@@ -126,6 +133,7 @@
 		D4197B7A20B06A2E0031146D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D444D6F120B0814D003F4BC9 /* ResponseMapper */,
 				D4197B8820B06DD40031146D /* RequestConfigurator */,
 				D4197B7B20B06A350031146D /* NetworkClient */,
 			);
@@ -209,6 +217,22 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		D444D6EE20B074C1003F4BC9 /* ResponseObjects */ = {
+			isa = PBXGroup;
+			children = (
+				D444D6EF20B074F5003F4BC9 /* BookListResponse.swift */,
+			);
+			path = ResponseObjects;
+			sourceTree = "<group>";
+		};
+		D444D6F120B0814D003F4BC9 /* ResponseMapper */ = {
+			isa = PBXGroup;
+			children = (
+				D444D6F520B08180003F4BC9 /* JSONMapper.swift */,
+			);
+			path = ResponseMapper;
+			sourceTree = "<group>";
+		};
 		D4951C7820AF519300007A01 /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +254,7 @@
 		D4951C7C20AF575100007A01 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				D444D6EE20B074C1003F4BC9 /* ResponseObjects */,
 				D4951C7D20AF57EE00007A01 /* Book.swift */,
 			);
 			path = Entities;
@@ -526,10 +551,13 @@
 			files = (
 				D4197B9320B06FE60031146D /* RESTRequestConfigurator.swift in Sources */,
 				D4197B8A20B06E0A0031146D /* RequestConfigurator.swift in Sources */,
+				D444D6F020B074F5003F4BC9 /* BookListResponse.swift in Sources */,
 				D4197B8D20B06E5E0031146D /* RequestDataModel.swift in Sources */,
 				D4951C7E20AF57EE00007A01 /* Book.swift in Sources */,
 				D4197B8320B06AB10031146D /* CommonNetworkClient.swift in Sources */,
+				D444D6ED20B07232003F4BC9 /* BooksGatewayImpl.swift in Sources */,
 				D4FE286F20B05F22006BD145 /* Result.swift in Sources */,
+				D444D6F620B08180003F4BC9 /* JSONMapper.swift in Sources */,
 				D4951C7B20AF51EA00007A01 /* GetBooksUseCase.swift in Sources */,
 				D4197B8020B06A770031146D /* ServerResponseModel.swift in Sources */,
 				D49ADAA220AF41AD0093F36D /* ViewController.swift in Sources */,
