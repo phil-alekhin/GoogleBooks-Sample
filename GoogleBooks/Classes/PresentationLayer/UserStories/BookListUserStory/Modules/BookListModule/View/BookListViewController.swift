@@ -13,6 +13,11 @@ final class BookListViewController: UIViewController {
 
     // MARK: Lifecycle
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        BookListAssembly.instance().inject(into: self)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewReady()
