@@ -22,7 +22,9 @@ final class CommonNetworkClient: NetworkClient {
             }
 
             guard let serverResponse = response as? HTTPURLResponse else {
-                block(nil, error)
+                DispatchQueue.main.async {
+                    block(nil, error)
+                }
                 return
             }
 
@@ -30,7 +32,9 @@ final class CommonNetworkClient: NetworkClient {
             responseModel.response = serverResponse
             responseModel.data = data
 
-            block(responseModel, error)
+            DispatchQueue.main.async {
+                block(responseModel, error)
+            }
         }
 
         task.resume()
