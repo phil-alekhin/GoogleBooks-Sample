@@ -1,0 +1,148 @@
+{
+  "kind": "books#volumes",
+  "totalItems": 2323,
+  "items": [
+    {
+      "kind": "books#volume",
+      "id": "s18aAQAAIAAJ",
+      "etag": "rRKYWhB4PQQ",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/s18aAQAAIAAJ",
+      "volumeInfo": {
+        "title": "Лев Александрович Дмитриев",
+        "subtitle": "библиография, творческий путь, воспоминания, дневники, письма",
+        "authors": [
+          "Лев Александрович Дмитриев",
+          "Институт русской литературы (Пушкинский дом)"
+        ],
+        "publisher": "",
+        "publishedDate": "1995",
+        "industryIdentifiers": [
+          {
+            "type": "OTHER",
+            "identifier": "STANFORD:36105017594693"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 137,
+        "printType": "BOOK",
+        "categories": [
+          "Biography & Autobiography"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=s18aAQAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=s18aAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "ru",
+        "previewLink": "http://books.google.ru/books?id=s18aAQAAIAAJ&q=%D0%9B%D0%B5%D0%B2&dq=%D0%9B%D0%B5%D0%B2&hl=&cd=1&source=gbs_api",
+        "infoLink": "http://books.google.ru/books?id=s18aAQAAIAAJ&dq=%D0%9B%D0%B5%D0%B2&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/%D0%9B%D0%B5%D0%B2_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D0%B8%D1%87_%D0%94%D0%BC%D0%B8.html?hl=&id=s18aAQAAIAAJ"
+      },
+      "saleInfo": {
+        "country": "RU",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "RU",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=s18aAQAAIAAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "bVffBwAAQBAJ",
+      "etag": "JNQElFZj03s",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/bVffBwAAQBAJ",
+      "volumeInfo": {
+        "title": "Березовая роща",
+        "subtitle": "Стихи. Проза",
+        "authors": [
+          "Смилянский Лев Маркович"
+        ],
+        "publisher": "Триумф Triumph www.triumph.ru",
+        "description": "Настоящее издание представляет собой творческий сборник Льва Смилянского и является второй его книгой, выпущенной нашим издательством. В сборник включены стихотворения автора 2013 – 2015 г.г., семейные хроники и дневниковые записи.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9785893926705"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "5893926706"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 272,
+        "printType": "BOOK",
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.0.0.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=bVffBwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=bVffBwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "ru",
+        "previewLink": "http://books.google.ru/books?id=bVffBwAAQBAJ&printsec=frontcover&dq=%D0%9B%D0%B5%D0%B2&hl=&cd=2&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=bVffBwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://market.android.com/details?id=book-bVffBwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "RU",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 0.0,
+          "currencyCode": "RUB"
+        },
+        "retailPrice": {
+          "amount": 0.0,
+          "currencyCode": "RUB"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=bVffBwAAQBAJ&rdid=book-bVffBwAAQBAJ&rdot=1&source=gbs_api"
+      },
+      "accessInfo": {
+        "country": "RU",
+        "viewability": "ALL_PAGES",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=bVffBwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Настоящее издание представляет собой творческий сборник Льва Смилянского и является второй его книгой, выпущенной нашим ..."
+      }
+    }
+  ]
+}

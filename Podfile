@@ -11,6 +11,8 @@ target 'GoogleBooks' do
 
   target 'GoogleBooksTests' do
     inherit! :search_paths
+
+    pod 'OHHTTPStubs/Swift'
   end
 
 end
