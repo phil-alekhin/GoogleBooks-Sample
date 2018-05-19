@@ -21,6 +21,7 @@
 		D444D6F020B074F5003F4BC9 /* BookListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D6EF20B074F5003F4BC9 /* BookListResponse.swift */; };
 		D444D6F620B08180003F4BC9 /* JSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D6F520B08180003F4BC9 /* JSONMapper.swift */; };
 		D444D6F920B086D5003F4BC9 /* ComponentAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D6F820B086D5003F4BC9 /* ComponentAssembly.swift */; };
+		D444D6FC20B08876003F4BC9 /* GatewayAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D6FB20B08876003F4BC9 /* GatewayAssembly.swift */; };
 		D4951C7B20AF51EA00007A01 /* GetBooksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4951C7A20AF51EA00007A01 /* GetBooksUseCase.swift */; };
 		D4951C7E20AF57EE00007A01 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4951C7D20AF57EE00007A01 /* Book.swift */; };
 		D49ADAA020AF41AD0093F36D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA9F20AF41AD0093F36D /* AppDelegate.swift */; };
@@ -62,6 +63,7 @@
 		D444D6EF20B074F5003F4BC9 /* BookListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListResponse.swift; sourceTree = "<group>"; };
 		D444D6F520B08180003F4BC9 /* JSONMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMapper.swift; sourceTree = "<group>"; };
 		D444D6F820B086D5003F4BC9 /* ComponentAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentAssembly.swift; sourceTree = "<group>"; };
+		D444D6FB20B08876003F4BC9 /* GatewayAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayAssembly.swift; sourceTree = "<group>"; };
 		D4951C7A20AF51EA00007A01 /* GetBooksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBooksUseCase.swift; sourceTree = "<group>"; };
 		D4951C7D20AF57EE00007A01 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		D49ADA9C20AF41AD0093F36D /* GoogleBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,9 +246,18 @@
 			path = Assemblies;
 			sourceTree = "<group>";
 		};
+		D444D6FA20B0885F003F4BC9 /* Assemblies */ = {
+			isa = PBXGroup;
+			children = (
+				D444D6FB20B08876003F4BC9 /* GatewayAssembly.swift */,
+			);
+			path = Assemblies;
+			sourceTree = "<group>";
+		};
 		D4951C7820AF519300007A01 /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
+				D444D6FA20B0885F003F4BC9 /* Assemblies */,
 				D4197B7520B0645D0031146D /* Gateways */,
 				D4951C7920AF51B800007A01 /* UseCases */,
 			);
@@ -568,6 +579,7 @@
 				D4197B8320B06AB10031146D /* CommonNetworkClient.swift in Sources */,
 				D444D6F920B086D5003F4BC9 /* ComponentAssembly.swift in Sources */,
 				D444D6ED20B07232003F4BC9 /* BooksGatewayImpl.swift in Sources */,
+				D444D6FC20B08876003F4BC9 /* GatewayAssembly.swift in Sources */,
 				D4FE286F20B05F22006BD145 /* Result.swift in Sources */,
 				D444D6F620B08180003F4BC9 /* JSONMapper.swift in Sources */,
 				D4951C7B20AF51EA00007A01 /* GetBooksUseCase.swift in Sources */,
