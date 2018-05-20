@@ -15,6 +15,10 @@ final class BookListAssembly: Assembly {
         return definePlaceholder()
     }
 
+    var displayManager: BookListDisplayManager {
+        return define(init: BookListDisplayManager())
+    }
+
     var presenter: BookListPresenter {
         return define(
             init: BookListPresenterImpl(
@@ -28,6 +32,7 @@ final class BookListAssembly: Assembly {
     func inject(into viewController: BookListViewController) {
         return defineInjection(key: "view", into: viewController) {
             $0.presenter = self.presenter
+            $0.displayManager = self.displayManager
             return $0
         }
     }
