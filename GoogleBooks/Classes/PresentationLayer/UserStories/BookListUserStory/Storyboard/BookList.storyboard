@@ -56,11 +56,42 @@
                     <connections>
                         <outlet property="messageView" destination="BsV-8F-Lig" id="yVz-1v-aaH"/>
                         <outlet property="tableView" destination="h9I-vH-iXx" id="zaR-bV-fM2"/>
+                        <segue destination="ATd-b7-UD2" kind="show" id="6kq-R5-rcl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vxp-6W-Lm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="194" y="73"/>
+            <point key="canvasLocation" x="143" y="72"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="O6F-y8-flf">
+            <objects>
+                <viewController title="Search" id="ATd-b7-UD2" customClass="BookSearchViewController" customModule="GoogleBooks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kvD-yW-9Jr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YX0-xG-fsN">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QJm-hU-1JM" firstAttribute="trailing" secondItem="YX0-xG-fsN" secondAttribute="trailing" id="0ba-Hu-Wiw"/>
+                            <constraint firstItem="YX0-xG-fsN" firstAttribute="leading" secondItem="QJm-hU-1JM" secondAttribute="leading" id="9yf-aE-fzY"/>
+                            <constraint firstAttribute="bottom" secondItem="YX0-xG-fsN" secondAttribute="bottom" id="QMf-52-xOW"/>
+                            <constraint firstItem="YX0-xG-fsN" firstAttribute="top" secondItem="QJm-hU-1JM" secondAttribute="top" id="Sjj-mD-wQB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QJm-hU-1JM"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="YX0-xG-fsN" id="qSD-ZQ-KcX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S6a-Mf-OJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1033" y="-280"/>
         </scene>
     </scenes>
 </document>

@@ -50,6 +50,7 @@
 		D4DF061020B1D75E00004248 /* BookListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF060F20B1D75E00004248 /* BookListViewControllerTests.swift */; };
 		D4DF061220B1D88E00004248 /* BookListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF061120B1D88E00004248 /* BookListPresenterTests.swift */; };
 		D4DF061520B1D94E00004248 /* GetBooksUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF061420B1D94E00004248 /* GetBooksUseCaseMock.swift */; };
+		D4DF061920B1DD4100004248 /* BookSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF061820B1DD4100004248 /* BookSearchViewController.swift */; };
 		D4FE286F20B05F22006BD145 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE286E20B05F22006BD145 /* Result.swift */; };
 		DD8A65F00C9A9C587576BAAA /* Pods_GoogleBooksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 197282DCA0141609A2288D5D /* Pods_GoogleBooksTests.framework */; };
 /* End PBXBuildFile section */
@@ -116,6 +117,7 @@
 		D4DF060F20B1D75E00004248 /* BookListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewControllerTests.swift; sourceTree = "<group>"; };
 		D4DF061120B1D88E00004248 /* BookListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListPresenterTests.swift; sourceTree = "<group>"; };
 		D4DF061420B1D94E00004248 /* GetBooksUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBooksUseCaseMock.swift; sourceTree = "<group>"; };
+		D4DF061820B1DD4100004248 /* BookSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchViewController.swift; sourceTree = "<group>"; };
 		D4FE286E20B05F22006BD145 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		E89A37EC8C6E66A808D03549 /* Pods_GoogleBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -340,6 +342,7 @@
 		D444D70A20B0BF33003F4BC9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D4DF061620B1DCA100004248 /* BookSearchModule */,
 				D444D70C20B0BF42003F4BC9 /* BookListModule */,
 			);
 			path = Modules;
@@ -611,6 +614,22 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		D4DF061620B1DCA100004248 /* BookSearchModule */ = {
+			isa = PBXGroup;
+			children = (
+				D4DF061720B1DCA900004248 /* View */,
+			);
+			path = BookSearchModule;
+			sourceTree = "<group>";
+		};
+		D4DF061720B1DCA900004248 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4DF061820B1DD4100004248 /* BookSearchViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D4FE286D20B05F0B006BD145 /* GetBooksUseCase */ = {
 			isa = PBXGroup;
 			children = (
@@ -862,6 +881,7 @@
 				D49ADAA020AF41AD0093F36D /* AppDelegate.swift in Sources */,
 				D4197B7820B064910031146D /* BooksGateway.swift in Sources */,
 				D444D72020B0C4F8003F4BC9 /* BookTableViewCell.swift in Sources */,
+				D4DF061920B1DD4100004248 /* BookSearchViewController.swift in Sources */,
 				D444D71120B0BF86003F4BC9 /* BookListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
