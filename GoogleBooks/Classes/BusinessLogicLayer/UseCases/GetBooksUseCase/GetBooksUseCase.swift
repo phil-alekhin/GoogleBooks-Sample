@@ -15,4 +15,9 @@ protocol GetBooksUseCase {
     ///     - queryString: Search query string
     ///     - completionHandler: Block called upon completion the method, and returns Error if there is any
     func getBooks(queryString: String, completionHandler: @escaping GetBooksCompletionHandler)
+
+    /// Returns book list from cache
+    ///
+    /// - returns: An array of Book
+    func getBooksFromCache() -> [Book]
 }

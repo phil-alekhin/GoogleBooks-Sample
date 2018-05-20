@@ -3,6 +3,9 @@ use_frameworks!
 
 target 'GoogleBooks' do
 
+  # UI
+  pod 'Kingfisher'
+
   # Dependency managment
   pod 'EasyDi'
 
