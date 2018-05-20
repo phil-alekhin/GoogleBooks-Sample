@@ -1,5 +1,6 @@
 PODS:
   - EasyDi (1.4.0)
+  - Kingfisher (4.7.0)
   - OHHTTPStubs/Core (6.1.0)
   - OHHTTPStubs/Default (6.1.0):
     - OHHTTPStubs/Core
@@ -17,20 +18,23 @@ PODS:
 
 DEPENDENCIES:
   - EasyDi
+  - Kingfisher
   - OHHTTPStubs/Swift
   - SwiftLint
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - EasyDi
+    - Kingfisher
     - OHHTTPStubs
     - SwiftLint
 
 SPEC CHECKSUMS:
   EasyDi: 84cfe04e906c0f463b1b1d76ed4be3db446f9702
+  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   OHHTTPStubs: 1e21c7d2c084b8153fc53d48400d8919d2d432d0
   SwiftLint: ce933681be10c3266e82576dad676fa815a602e9
 
-PODFILE CHECKSUM: 7dba58f7aacaac160d6c757bd24517c010aa046b
+PODFILE CHECKSUM: ddae9ef821247674bbc4d84b28e9feeec0696a6f
 
 COCOAPODS: 1.5.0
