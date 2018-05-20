@@ -20,3 +20,11 @@ final class BookDetailsViewController: UIViewController {
         super.viewDidLoad()
     }
 }
+
+// MARK: BookDetailsView
+
+extension BookDetailsViewController: BookDetailsView {
+    func show(_ book: Book) {
+
+    }
+}
