@@ -36,6 +36,12 @@ final class BookListViewController: UIViewController {
         presenter.viewReady()
     }
 
+    // MARK: Actions
+
+    @objc func didChangeSearchBar() {
+        presenter.didChangeSearchBar(with: searchController.searchBar.text!)
+    }
+
     private func setupSearchController() {
         searchController = UISearchController(searchResultsController: searchResultsController)
         searchController.hidesNavigationBarDuringPresentation = false
@@ -89,7 +95,37 @@ extension BookListViewController: BookListDisplayManagerDelegate {
 
 // MARK: - UISearchBarDelegate
 
-extension BookListViewController: UISearchBarDelegate {}
+extension BookListViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.count < 3 {
+            return
+        }
+
+        NSObject.cancelPreviousPerformRequests(
+            withTarget: self,
+            selector: #selector(didChangeSearchBar),
+            object: nil
+        )
+
+        self.perform(
+            #selector(didChangeSearchBar),
+            with: nil,
+            afterDelay: 0.5
+        )
+    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.setShowsCancelButton(false, animated: true)
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.setShowsCancelButton(false, animated: true)
+    }
+
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.setShowsCancelButton(true, animated: true)
+    }
+}
 
 // MARK: - EmbedViewControllerSegueHolder
 

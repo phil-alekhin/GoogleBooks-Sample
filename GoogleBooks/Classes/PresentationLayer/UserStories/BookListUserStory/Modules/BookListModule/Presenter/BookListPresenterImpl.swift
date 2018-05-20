@@ -30,6 +30,10 @@ final class BookListPresenterImpl: BookListPresenter {
             view?.show(cachedBooks)
         }
     }
+
+    func didChangeSearchBar(with queryString: String) {
+        bookSearchModuleInput?.update(with: queryString)
+    }
 }
 
 // MARK: - BookSearchModuleOutput
