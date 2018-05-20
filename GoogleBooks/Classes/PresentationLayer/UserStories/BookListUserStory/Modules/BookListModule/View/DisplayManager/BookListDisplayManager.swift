@@ -44,6 +44,10 @@ extension BookListDisplayManager: UITableViewDataSource {
 
         return bookCell
     }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 115
+    }
 }
 
 // MARK: - UITableViewDelegate
