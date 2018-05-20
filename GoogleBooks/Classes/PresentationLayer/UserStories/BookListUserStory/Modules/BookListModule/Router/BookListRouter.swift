@@ -8,5 +8,5 @@
 
 protocol BookListRouter {
     /// Initiates loading of BookSearch module
-    func loadBookSearchModule()
+    func loadBookSearchModule(with moduleOutput: BookSearchModuleOutput)
 }

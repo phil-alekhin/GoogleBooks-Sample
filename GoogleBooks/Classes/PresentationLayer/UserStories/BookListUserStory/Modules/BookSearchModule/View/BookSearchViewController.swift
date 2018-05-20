@@ -9,6 +9,7 @@
 import UIKit
 
 final class BookSearchViewController: UIViewController {
+    var presenter: BookSearchPresenter!
 
     // MARK: - IBOutlets
 
@@ -16,7 +17,25 @@ final class BookSearchViewController: UIViewController {
 
     // MARK: - Lifecycle
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        BookSearchAssembly.instance().inject(into: self)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+}
+
+// MARK: - BookSearchView
+
+extension BookSearchViewController: BookSearchView {}
+
+// MARK: - ModuleInputProvider
+
+extension BookSearchViewController: ModuleInputProvider {
+    var moduleInput: ModuleInput? {
+        // switlint:disable force_cast
+        return presenter as? ModuleInput
     }
 }

@@ -13,7 +13,12 @@ final class BookListRouterImpl: BookListRouter {
         self.transitionHandler = transitionHandler
     }
 
-    func loadBookSearchModule() {
-        transitionHandler?.performSegue(with: BookListSegue.bookListToBookSearch)
+    func loadBookSearchModule(with moduleOutput: BookSearchModuleOutput) {
+        transitionHandler?.openModule(
+            with: BookListSegue.bookListToBookSearch,
+            configurationBlock: { (moduleInput: BookSearchModuleInput) in
+                moduleInput.configure(with: moduleOutput)
+            }
+        )
     }
 }

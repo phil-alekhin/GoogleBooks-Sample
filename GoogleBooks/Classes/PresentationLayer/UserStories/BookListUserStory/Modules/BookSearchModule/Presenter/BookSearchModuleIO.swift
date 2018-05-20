@@ -6,7 +6,7 @@
 //  Copyright © 2018 Philip Alekhin. All rights reserved.
 //
 
-protocol BookSearchModuleInput {
+protocol BookSearchModuleInput: class, ModuleInput {
     /// Configures the module with an object which conforms to BookSearchModuleOutput protocol
     func configure(with moduleOutput: BookSearchModuleOutput)
 

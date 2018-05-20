@@ -10,6 +10,7 @@ import Foundation
 
 final class BookListPresenterImpl: BookListPresenter {
     private weak var view: BookListView?
+    private weak var bookSearchModuleInput: BookSearchModuleInput?
     private let router: BookListRouter
     private let getBooksUseCase: GetBooksUseCase
 
@@ -20,7 +21,7 @@ final class BookListPresenterImpl: BookListPresenter {
     }
 
     func viewReady() {
-        router.loadBookSearchModule()
+        router.loadBookSearchModule(with: self)
 
         let cachedBooks = getBooksUseCase.getBooksFromCache()
         if cachedBooks.isEmpty {
@@ -28,5 +29,17 @@ final class BookListPresenterImpl: BookListPresenter {
         } else {
             view?.show(cachedBooks)
         }
+    }
+}
+
+// MARK: - BookSearchModuleOutput
+
+extension BookListPresenterImpl: BookSearchModuleOutput {
+    func didLoad(bookSearchModule: BookSearchModuleInput) {
+        bookSearchModuleInput = bookSearchModule
+    }
+
+    func didSelect(_ book: Book) {
+
     }
 }
