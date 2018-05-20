@@ -23,6 +23,8 @@ final class BookListDisplayManager: NSObject {
                 publishedDate: book.publishedDate ?? "",
                 book: book)
         }
+        tableView.estimatedRowHeight = 115
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 }
 
@@ -43,10 +45,6 @@ extension BookListDisplayManager: UITableViewDataSource {
         bookCell.update(with: cellObject)
 
         return bookCell
-    }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 115
     }
 }
 

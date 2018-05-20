@@ -26,27 +26,34 @@
                             <constraint firstAttribute="height" constant="90" id="y3a-xm-rj1"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Убик (сборник)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72i-5r-1Ds">
-                        <rect key="frame" x="94" y="12" width="223" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14 Апреля 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgs-SI-DdQ">
-                        <rect key="frame" x="94" y="40.5" width="104.5" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cbc-Zq-PDP">
+                        <rect key="frame" x="102" y="12" width="215" height="89.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Убик (сборник)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72i-5r-1Ds">
+                                <rect key="frame" x="0.0" y="0.0" width="128.5" height="40.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14 Апреля 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgs-SI-DdQ">
+                                <rect key="frame" x="0.0" y="48.5" width="104.5" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="89.5" id="EWm-41-3FC"/>
+                        </constraints>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="bgs-SI-DdQ" firstAttribute="leading" secondItem="t0I-Xw-2nA" secondAttribute="trailing" constant="8" id="BDZ-ds-GaT"/>
+                    <constraint firstItem="cbc-Zq-PDP" firstAttribute="leading" secondItem="t0I-Xw-2nA" secondAttribute="trailing" constant="16" id="6HV-Ca-4ew"/>
                     <constraint firstItem="t0I-Xw-2nA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="CJg-n6-aZ9"/>
-                    <constraint firstItem="72i-5r-1Ds" firstAttribute="top" secondItem="t0I-Xw-2nA" secondAttribute="top" id="Q4T-bq-cne"/>
-                    <constraint firstItem="bgs-SI-DdQ" firstAttribute="top" secondItem="72i-5r-1Ds" secondAttribute="bottom" constant="8" id="dhR-w0-k6d"/>
-                    <constraint firstItem="72i-5r-1Ds" firstAttribute="leading" secondItem="t0I-Xw-2nA" secondAttribute="trailing" constant="8" id="lux-GV-dTD"/>
+                    <constraint firstAttribute="bottom" secondItem="cbc-Zq-PDP" secondAttribute="bottom" constant="12" id="DUu-UE-9GS"/>
+                    <constraint firstAttribute="trailing" secondItem="cbc-Zq-PDP" secondAttribute="trailing" constant="8" id="btp-Ps-AZ8"/>
+                    <constraint firstItem="cbc-Zq-PDP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="oNs-JN-I0E"/>
                     <constraint firstItem="t0I-Xw-2nA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="q9N-TL-QNE"/>
-                    <constraint firstAttribute="trailing" secondItem="72i-5r-1Ds" secondAttribute="trailing" constant="8" id="t3j-J1-EFv"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
