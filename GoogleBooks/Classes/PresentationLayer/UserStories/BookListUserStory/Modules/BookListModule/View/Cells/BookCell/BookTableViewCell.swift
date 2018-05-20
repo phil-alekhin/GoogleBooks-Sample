@@ -12,4 +12,11 @@ final class BookTableViewCell: UITableViewCell {
     @IBOutlet var thumbnailImageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var publishedDateLabel: UILabel!
+
+    static var cellIdentifier = "BookTableViewCell"
+
+    func update(with cellObject: BookCellObject) {
+        titleLabel.text = cellObject.title
+        publishedDateLabel.text = cellObject.publishedDate
+    }
 }
