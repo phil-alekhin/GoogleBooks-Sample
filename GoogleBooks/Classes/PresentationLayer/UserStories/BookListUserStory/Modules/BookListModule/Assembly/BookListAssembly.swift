@@ -11,17 +11,10 @@ import EasyDi
 final class BookListAssembly: Assembly {
     lazy var useCaseAssembly: UseCaseAssembly = self.context.assembly()
     lazy var helpersAssembly: HelpersAssembly = self.context.assembly()
+    lazy var commonComponentsAssembly: CommonComponentAssembly = self.context.assembly()
 
     var view: BookListView & TransitionHandler {
         return definePlaceholder()
-    }
-
-    var displayManager: BookListDisplayManager {
-        return define(
-            init: BookListDisplayManager(
-                cellObjectFactory: self.helpersAssembly.bookCellObjectFactory
-            )
-        )
     }
 
     var presenter: BookListPresenter {
@@ -46,7 +39,7 @@ final class BookListAssembly: Assembly {
     func inject(into viewController: BookListViewController) {
         return defineInjection(key: "view", into: viewController) {
             $0.presenter = self.presenter
-            $0.displayManager = self.displayManager
+            $0.displayManager = self.commonComponentsAssembly.bookListDisplayManager
             return $0
         }
     }
