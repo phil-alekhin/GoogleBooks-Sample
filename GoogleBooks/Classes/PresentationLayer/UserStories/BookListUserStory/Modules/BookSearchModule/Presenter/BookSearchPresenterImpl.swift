@@ -13,11 +13,18 @@ final class BookSearchPresenterImpl: BookSearchPresenter {
     private weak var moduleOutput: BookSearchModuleOutput?
     private let router: BookSearchRouter
     private let getBooksUseCase: GetBooksUseCase
+    private let saveBooksUseCase: SaveBooksUseCase
 
-    init(view: BookSearchView, router: BookSearchRouter, getBooksUseCase: GetBooksUseCase) {
+    init(
+        view: BookSearchView,
+        router: BookSearchRouter,
+        getBooksUseCase: GetBooksUseCase,
+        saveBooksUseCase: SaveBooksUseCase
+    ) {
         self.view = view
         self.router = router
         self.getBooksUseCase = getBooksUseCase
+        self.saveBooksUseCase = saveBooksUseCase
     }
 
     func viewReady() {
@@ -40,7 +47,7 @@ extension BookSearchPresenterImpl: BookSearchModuleInput {
 
     func update(with searchString: String) {
         view?.updateLoadingState(isLoading: true)
-        getBooksUseCase.getBooks(queryString: searchString) { [weak view, router] result in
+        getBooksUseCase.getBooks(queryString: searchString) { [weak view, router, saveBooksUseCase] result in
             view?.updateLoadingState(isLoading: false)
 
             switch result {
@@ -51,6 +58,7 @@ extension BookSearchPresenterImpl: BookSearchModuleInput {
                 }
 
                 view?.updateView(with: books)
+                saveBooksUseCase.save(books: books)
             case .failure(let error):
                 router.showError(with: error.localizedDescription)
             }

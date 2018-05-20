@@ -30,4 +30,8 @@ final class ComponentAssembly: Assembly {
     var bookResponseMapper: JSONMapper<BookListResponse> {
         return define(scope: .lazySingleton, init: JSONMapper<BookListResponse>(), inject: nil)
     }
+
+    var userDefaultsPersistanceManager: UserDefaultsPersistanceManager {
+        return define(scope: .lazySingleton, init: UserDefaultsPersistanceManager(), inject: nil)
+    }
 }

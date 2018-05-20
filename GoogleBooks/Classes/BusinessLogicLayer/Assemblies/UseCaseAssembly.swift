@@ -20,4 +20,14 @@ final class UseCaseAssembly: Assembly {
             inject: nil
         )
     }
+
+    var saveBooksUseCase: SaveBooksUseCase {
+        return define(
+            scope: .lazySingleton,
+            init: SaveBooksUseCaseImpl(
+                booksGateway: self.gatewayAssembly.booksGateway
+            ),
+            inject: nil
+        )
+    }
 }

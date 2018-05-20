@@ -12,11 +12,18 @@ final class BooksGatewayImpl: BooksGateway {
     private let requestConfigurator: RequestConfigurator
     private let networkClient: NetworkClient
     private let jsonMapper: JSONMapper<BookListResponse>
+    private let persistanceManager: UserDefaultsPersistanceManager
 
-    init(requestConfigurator: RequestConfigurator, networkClient: NetworkClient, jsonMapper: JSONMapper<BookListResponse>) {
+    init(
+        requestConfigurator: RequestConfigurator,
+        networkClient: NetworkClient,
+        jsonMapper: JSONMapper<BookListResponse>,
+        persistanceManager: UserDefaultsPersistanceManager
+    ) {
         self.requestConfigurator = requestConfigurator
         self.networkClient = networkClient
         self.jsonMapper = jsonMapper
+        self.persistanceManager = persistanceManager
     }
 
     func obtainBookList(queryString: String, completionHandler: @escaping BooksGatewayCompletionHandler) {
@@ -40,6 +47,17 @@ final class BooksGatewayImpl: BooksGateway {
                 completionHandler(.failure(error))
             }
         }
+    }
+
+    func saveBooksToCache(_ books: [Book]) {
+        let booksKey = "books"
+        persistanceManager.save(object: books, key: booksKey)
+    }
+
+    func getBooksFromCache() -> [Book] {
+        let booksKey = "books"
+        let books: [Book] = persistanceManager.get(with: booksKey) ?? []
+        return books
     }
 
     private func createBooksRequest(with queryString: String) -> URLRequest {

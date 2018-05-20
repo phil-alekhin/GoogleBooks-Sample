@@ -68,6 +68,9 @@
 		D4DF064120B1EE8600004248 /* CommonComponentAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF064020B1EE8600004248 /* CommonComponentAssembly.swift */; };
 		D4DF064420B1F13D00004248 /* BookSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF064320B1F13D00004248 /* BookSearchRouter.swift */; };
 		D4DF064620B1F15C00004248 /* BookSearchRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF064520B1F15C00004248 /* BookSearchRouterImpl.swift */; };
+		D4DF064920B1FD1F00004248 /* SaveBooksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF064820B1FD1F00004248 /* SaveBooksUseCase.swift */; };
+		D4DF064B20B1FDCA00004248 /* SaveBooksUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF064A20B1FDCA00004248 /* SaveBooksUseCaseImpl.swift */; };
+		D4DF064E20B2003100004248 /* UserDefaultsPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF064D20B2003100004248 /* UserDefaultsPersistenceManager.swift */; };
 		D4FE286F20B05F22006BD145 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE286E20B05F22006BD145 /* Result.swift */; };
 		DD8A65F00C9A9C587576BAAA /* Pods_GoogleBooksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 197282DCA0141609A2288D5D /* Pods_GoogleBooksTests.framework */; };
 /* End PBXBuildFile section */
@@ -152,6 +155,9 @@
 		D4DF064020B1EE8600004248 /* CommonComponentAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonComponentAssembly.swift; sourceTree = "<group>"; };
 		D4DF064320B1F13D00004248 /* BookSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchRouter.swift; sourceTree = "<group>"; };
 		D4DF064520B1F15C00004248 /* BookSearchRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchRouterImpl.swift; sourceTree = "<group>"; };
+		D4DF064820B1FD1F00004248 /* SaveBooksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveBooksUseCase.swift; sourceTree = "<group>"; };
+		D4DF064A20B1FDCA00004248 /* SaveBooksUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveBooksUseCaseImpl.swift; sourceTree = "<group>"; };
+		D4DF064D20B2003100004248 /* UserDefaultsPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsPersistenceManager.swift; sourceTree = "<group>"; };
 		D4FE286E20B05F22006BD145 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		E89A37EC8C6E66A808D03549 /* Pods_GoogleBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -205,6 +211,7 @@
 		D4197B7920B06A050031146D /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
+				D4DF064C20B1FFF800004248 /* PersistenceManager */,
 				D4197B7A20B06A2E0031146D /* Components */,
 			);
 			path = CoreLayer;
@@ -450,6 +457,7 @@
 		D4951C7920AF51B800007A01 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				D4DF064720B1FD0900004248 /* SaveBooksUseCase */,
 				D4FE286D20B05F0B006BD145 /* GetBooksUseCase */,
 				D4FE286E20B05F22006BD145 /* Result.swift */,
 			);
@@ -737,6 +745,23 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		D4DF064720B1FD0900004248 /* SaveBooksUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				D4DF064820B1FD1F00004248 /* SaveBooksUseCase.swift */,
+				D4DF064A20B1FDCA00004248 /* SaveBooksUseCaseImpl.swift */,
+			);
+			path = SaveBooksUseCase;
+			sourceTree = "<group>";
+		};
+		D4DF064C20B1FFF800004248 /* PersistenceManager */ = {
+			isa = PBXGroup;
+			children = (
+				D4DF064D20B2003100004248 /* UserDefaultsPersistenceManager.swift */,
+			);
+			path = PersistenceManager;
+			sourceTree = "<group>";
+		};
 		D4FE286D20B05F0B006BD145 /* GetBooksUseCase */ = {
 			isa = PBXGroup;
 			children = (
@@ -887,11 +912,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GoogleBooks/Pods-GoogleBooks-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DefaultsKit/DefaultsKit.framework",
 				"${BUILT_PRODUCTS_DIR}/EasyDi/EasyDi.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DefaultsKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyDi.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
@@ -980,8 +1007,10 @@
 				D4197B8320B06AB10031146D /* CommonNetworkClient.swift in Sources */,
 				D4DF064120B1EE8600004248 /* CommonComponentAssembly.swift in Sources */,
 				D4DF062020B1DE3A00004248 /* EmbedViewControllerSegueHolder.swift in Sources */,
+				D4DF064E20B2003100004248 /* UserDefaultsPersistenceManager.swift in Sources */,
 				D4DE11A620B174EA0011FC1C /* BookListDisplayManagerDelegate.swift in Sources */,
 				D444D6F920B086D5003F4BC9 /* ComponentAssembly.swift in Sources */,
+				D4DF064B20B1FDCA00004248 /* SaveBooksUseCaseImpl.swift in Sources */,
 				D444D71820B0C1FE003F4BC9 /* BookListView.swift in Sources */,
 				D4DF063920B1E55800004248 /* BookSearchModuleIO.swift in Sources */,
 				D444D6ED20B07232003F4BC9 /* BooksGatewayImpl.swift in Sources */,
@@ -1001,6 +1030,7 @@
 				D4DE11A120B167560011FC1C /* BookCellObject.swift in Sources */,
 				D4197B7D20B06A500031146D /* NetworkClient.swift in Sources */,
 				D4DF064620B1F15C00004248 /* BookSearchRouterImpl.swift in Sources */,
+				D4DF064920B1FD1F00004248 /* SaveBooksUseCase.swift in Sources */,
 				D4197B9020B06F000031146D /* HTTPMethod.swift in Sources */,
 				D49ADAA020AF41AD0093F36D /* AppDelegate.swift in Sources */,
 				D4197B7820B064910031146D /* BooksGateway.swift in Sources */,
@@ -1176,10 +1206,7 @@
 				DEVELOPMENT_TEAM = QR2HHTKE2Y;
 				INFOPLIST_FILE = "GoogleBooks/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.phil.GoogleBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1198,10 +1225,7 @@
 				DEVELOPMENT_TEAM = QR2HHTKE2Y;
 				INFOPLIST_FILE = "GoogleBooks/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.phil.GoogleBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1218,11 +1242,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "GoogleBooksTests/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.phil.GoogleBooksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1239,11 +1259,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "GoogleBooksTests/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.phil.GoogleBooksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
