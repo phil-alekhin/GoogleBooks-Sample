@@ -42,6 +42,10 @@ final class BooksGatewayImpl: BooksGateway {
         }
     }
 
+    func saveBooksToCache(_ books: [Book]) {
+
+    }
+
     private func createBooksRequest(with queryString: String) -> URLRequest {
         var requestData = RequestDataModel()
         requestData.queryParameters = ["q": queryString]
