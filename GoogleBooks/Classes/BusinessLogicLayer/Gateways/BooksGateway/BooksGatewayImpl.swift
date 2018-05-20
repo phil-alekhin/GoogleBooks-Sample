@@ -34,7 +34,7 @@ final class BooksGatewayImpl: BooksGateway {
 
             do {
                 let bookListResponse = try self.jsonMapper.map(with: responseData)
-                let books = bookListResponse.volumes.map { $0.book }
+                let books = bookListResponse.volumes?.map { $0.book } ?? []
                 completionHandler(.success(books))
             } catch {
                 completionHandler(.failure(error))
