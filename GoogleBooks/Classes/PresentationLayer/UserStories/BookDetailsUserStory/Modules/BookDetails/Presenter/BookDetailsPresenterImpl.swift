@@ -19,3 +19,11 @@ final class BookDetailsPresenterImpl: BookDetailsPresenter {
 
     }
 }
+
+// MARK: - BookDetailsModuleInput
+
+extension BookDetailsPresenterImpl: BookDetailsModuleInput {
+    func setup(with book: Book) {
+
+    }
+}
