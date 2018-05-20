@@ -41,6 +41,11 @@ extension BookSearchPresenterImpl: BookSearchModuleInput {
 
             switch result {
             case .success(let books):
+                if books.isEmpty {
+                    view?.showEmptyState()
+                    return
+                }
+
                 view?.updateView(with: books)
             case .failure(let error):
                 router.showError(with: error.localizedDescription)

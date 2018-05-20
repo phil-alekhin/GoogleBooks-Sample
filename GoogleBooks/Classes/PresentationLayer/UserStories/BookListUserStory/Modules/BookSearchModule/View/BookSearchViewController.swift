@@ -20,6 +20,7 @@ final class BookSearchViewController: UIViewController {
         }
     }
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var messageView: UIView!
 
     // MARK: - Lifecycle
 
@@ -39,12 +40,18 @@ extension BookSearchViewController: BookSearchView {
     func updateLoadingState(isLoading: Bool) {
         if isLoading {
             tableView.isHidden = true
+            messageView.isHidden = true
             activityIndicator.startAnimating()
             return
         }
 
         tableView.isHidden = false
         activityIndicator.stopAnimating()
+    }
+
+    func showEmptyState() {
+        messageView.isHidden = false
+        tableView.isHidden = true
     }
 
     func updateView(with books: [Book]) {

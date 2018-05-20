@@ -75,6 +75,23 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbJ-xh-egS">
+                                <rect key="frame" x="0.0" y="290.5" width="375" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No books found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zef-OX-grI">
+                                        <rect key="frame" x="106.5" y="61" width="163.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="zef-OX-grI" firstAttribute="centerX" secondItem="gbJ-xh-egS" secondAttribute="centerX" id="gwt-13-duX"/>
+                                    <constraint firstItem="zef-OX-grI" firstAttribute="centerY" secondItem="gbJ-xh-egS" secondAttribute="centerY" id="loJ-0p-a5H"/>
+                                    <constraint firstAttribute="height" constant="150" id="sii-Qq-sFp"/>
+                                </constraints>
+                            </view>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Mkb-nz-kkp">
                                 <rect key="frame" x="169" y="347" width="37" height="37"/>
                                 <color key="color" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,14 +102,18 @@
                             <constraint firstItem="QJm-hU-1JM" firstAttribute="trailing" secondItem="YX0-xG-fsN" secondAttribute="trailing" id="0ba-Hu-Wiw"/>
                             <constraint firstItem="Mkb-nz-kkp" firstAttribute="centerX" secondItem="QJm-hU-1JM" secondAttribute="centerX" id="0qP-ag-Rbg"/>
                             <constraint firstItem="YX0-xG-fsN" firstAttribute="leading" secondItem="QJm-hU-1JM" secondAttribute="leading" id="9yf-aE-fzY"/>
+                            <constraint firstItem="gbJ-xh-egS" firstAttribute="leading" secondItem="QJm-hU-1JM" secondAttribute="leading" id="BJj-t4-6YZ"/>
                             <constraint firstAttribute="bottom" secondItem="YX0-xG-fsN" secondAttribute="bottom" id="QMf-52-xOW"/>
                             <constraint firstItem="Mkb-nz-kkp" firstAttribute="centerY" secondItem="QJm-hU-1JM" secondAttribute="centerY" id="SQS-MT-CTG"/>
                             <constraint firstItem="YX0-xG-fsN" firstAttribute="top" secondItem="QJm-hU-1JM" secondAttribute="top" id="Sjj-mD-wQB"/>
+                            <constraint firstItem="gbJ-xh-egS" firstAttribute="centerY" secondItem="QJm-hU-1JM" secondAttribute="centerY" id="eN5-56-8gq"/>
+                            <constraint firstItem="QJm-hU-1JM" firstAttribute="trailing" secondItem="gbJ-xh-egS" secondAttribute="trailing" id="qnP-1T-oYv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QJm-hU-1JM"/>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="Mkb-nz-kkp" id="SBW-Yu-vsf"/>
+                        <outlet property="messageView" destination="gbJ-xh-egS" id="BWS-ys-kSG"/>
                         <outlet property="tableView" destination="YX0-xG-fsN" id="qSD-ZQ-KcX"/>
                     </connections>
                 </viewController>

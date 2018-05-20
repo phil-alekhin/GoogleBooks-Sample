@@ -12,4 +12,6 @@ protocol BookSearchView: class {
     func updateLoadingState(isLoading: Bool)
 
     func updateView(with books: [Book])
+
+    func showEmptyState()
 }
