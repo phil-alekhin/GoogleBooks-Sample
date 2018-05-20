@@ -89,7 +89,7 @@ extension BookListViewController: BookListView {
 
 extension BookListViewController: BookListDisplayManagerDelegate {
     func didTapCell(with book: Book) {
-
+        presenter.didSelectCell(with: book)
     }
 }
 

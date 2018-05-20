@@ -10,6 +10,9 @@ protocol BookListPresenter {
     /// Informs presenter that a view ready
     func viewReady()
 
-    /// Notify presenter that a user has change a search string
+    /// Notifies presenter that a user has change a search string
     func didChangeSearchBar(with queryString: String)
+
+    /// Notifies presenter that a book was selected
+    func didSelectCell(with book: Book)
 }

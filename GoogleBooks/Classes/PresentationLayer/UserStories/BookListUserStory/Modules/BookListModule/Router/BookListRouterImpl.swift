@@ -21,4 +21,13 @@ final class BookListRouterImpl: BookListRouter {
             }
         )
     }
+
+    func showBookDetailsModule(with book: Book) {
+        transitionHandler?.openModule(
+            with: BookListSegue.bookListToBookDetails,
+            configurationBlock: { (moduleInput: BookDetailsModuleInput) in
+                moduleInput.setup(with: book)
+            }
+        )
+    }
 }

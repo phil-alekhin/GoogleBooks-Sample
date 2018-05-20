@@ -8,4 +8,5 @@
 
 enum BookListSegue {
     static let bookListToBookSearch = "BookListToBookSearchSegue"
+    static let bookListToBookDetails = "BookListToBookDetailsSegue"
 }

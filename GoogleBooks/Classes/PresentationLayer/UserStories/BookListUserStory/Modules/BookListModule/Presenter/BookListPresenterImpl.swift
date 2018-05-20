@@ -34,6 +34,10 @@ final class BookListPresenterImpl: BookListPresenter {
     func didChangeSearchBar(with queryString: String) {
         bookSearchModuleInput?.update(with: queryString)
     }
+
+    func didSelectCell(with book: Book) {
+        router.showBookDetailsModule(with: book)
+    }
 }
 
 // MARK: - BookSearchModuleOutput
@@ -44,6 +48,6 @@ extension BookListPresenterImpl: BookSearchModuleOutput {
     }
 
     func didSelect(_ book: Book) {
-
+        router.showBookDetailsModule(with: book)
     }
 }
