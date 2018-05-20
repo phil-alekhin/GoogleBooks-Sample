@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class BookTableViewCell: UITableViewCell {
+final class BookTableViewCell: UITableViewCell, NibLoadable {
     @IBOutlet var thumbnailImageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var publishedDateLabel: UILabel!

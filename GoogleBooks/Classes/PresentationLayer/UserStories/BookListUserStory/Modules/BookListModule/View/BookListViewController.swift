@@ -59,6 +59,7 @@ final class BookListViewController: UIViewController {
 
 extension BookListViewController: BookListView {
     func show(_ books: [Book]) {
+        tableView.register(BookTableViewCell.cellNib, forCellReuseIdentifier: BookTableViewCell.cellIdentifier)
         tableView.dataSource = displayManager
         tableView.delegate = displayManager
 
