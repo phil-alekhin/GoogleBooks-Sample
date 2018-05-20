@@ -22,6 +22,6 @@ final class GetBooksUseCaseImpl: GetBooksUseCase {
     }
 
     func getBooksFromCache() -> [Book] {
-        return []
+        return booksGateway.getBooksFromCache()
     }
 }
