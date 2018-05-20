@@ -10,10 +10,12 @@ import Foundation
 
 final class BookListPresenterImpl: BookListPresenter {
     private weak var view: BookListView?
+    private let router: BookListRouter
     private let getBooksUseCase: GetBooksUseCase
 
-    init(view: BookListView, getBooksUseCase: GetBooksUseCase) {
+    init(view: BookListView, router: BookListRouter, getBooksUseCase: GetBooksUseCase) {
         self.view = view
+        self.router = router
         self.getBooksUseCase = getBooksUseCase
     }
 

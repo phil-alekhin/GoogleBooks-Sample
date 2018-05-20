@@ -28,10 +28,15 @@ final class BookListAssembly: Assembly {
         return define(
             init: BookListPresenterImpl(
                 view: self.view,
+                router: self.router,
                 getBooksUseCase: self.useCaseAssembly.booksGateway
             ),
             inject: nil
         )
+    }
+
+    var router: BookListRouter {
+        return define(init: BookListRouterImpl())
     }
 
     func inject(into viewController: BookListViewController) {
