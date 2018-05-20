@@ -90,3 +90,12 @@ extension BookListViewController: BookListDisplayManagerDelegate {
 // MARK: - UISearchBarDelegate
 
 extension BookListViewController: UISearchBarDelegate {}
+
+// MARK: - EmbedViewControllerSegueHolder
+
+extension BookListViewController: EmbedViewControllerSegueHolder {
+
+    func didObtain(viewController: UIViewController) {
+        self.searchResultsController = viewController
+    }
+}
