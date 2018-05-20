@@ -23,6 +23,10 @@ final class BookSearchPresenterImpl: BookSearchPresenter {
     func viewReady() {
 
     }
+
+    func didSelect(_ book: Book) {
+        moduleOutput?.didSelect(book)
+    }
 }
 
 // MARK: - BookSearchModuleInput

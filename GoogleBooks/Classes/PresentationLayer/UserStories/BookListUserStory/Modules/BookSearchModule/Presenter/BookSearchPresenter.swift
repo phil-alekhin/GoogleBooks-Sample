@@ -9,4 +9,7 @@
 protocol BookSearchPresenter {
     /// Informs that a view ready
     func viewReady()
+
+    /// Informs that a book was selected
+    func didSelect(_ book: Book)
 }

@@ -69,7 +69,7 @@ extension BookSearchViewController: BookSearchView {
 
 extension BookSearchViewController: BookListDisplayManagerDelegate {
     func didTapCell(with book: Book) {
-
+        presenter.didSelect(book)
     }
 }
 
