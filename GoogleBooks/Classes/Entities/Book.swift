@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct Book: Decodable {
-    struct BookThumbnails: Decodable {
+struct Book: Equatable, Decodable {
+    struct BookThumbnails: Equatable, Decodable {
         let smallThumbnail: URL
         let thumbnail: URL
     }
@@ -30,5 +30,14 @@ struct Book: Decodable {
         case publishedDate
         case description
         case thumbnails = "imageLinks"
+    }
+}
+
+// MARK: Additional init method
+
+extension Book {
+    init(title: String, thumbnails: BookThumbnails) {
+        self.title = title
+        self.thumbnails = thumbnails
     }
 }
