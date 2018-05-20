@@ -12,19 +12,20 @@ final class BookListDisplayManager: NSObject {
     weak var tableView: UITableView?
     weak var delegate: BookListDisplayManagerDelegate?
 
+    private var cellObjectFactory: BookCellObjectFactory!
     private var viewModel: [BookCellObject] = []
+
+    init(cellObjectFactory: BookCellObjectFactory) {
+        super.init()
+        self.cellObjectFactory = cellObjectFactory
+    }
 
     func setup(with tableView: UITableView, books: [Book]) {
         self.tableView = tableView
-        viewModel = books.map { book in
-            return BookCellObject(
-                thumbnail: book.thumbnails.thumbnail,
-                title: book.title,
-                publishedDate: book.publishedDate ?? "",
-                book: book)
-        }
         tableView.estimatedRowHeight = 115
         tableView.rowHeight = UITableViewAutomaticDimension
+
+        viewModel = cellObjectFactory.cellObjects(from: books)
     }
 }
 

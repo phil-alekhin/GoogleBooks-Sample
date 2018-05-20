@@ -10,13 +10,18 @@ import EasyDi
 
 final class BookListAssembly: Assembly {
     lazy var useCaseAssembly: UseCaseAssembly = self.context.assembly()
+    lazy var helpersAssembly: HelpersAssembly = self.context.assembly()
 
     var view: BookListView {
         return definePlaceholder()
     }
 
     var displayManager: BookListDisplayManager {
-        return define(init: BookListDisplayManager())
+        return define(
+            init: BookListDisplayManager(
+                cellObjectFactory: self.helpersAssembly.bookCellObjectFactory
+            )
+        )
     }
 
     var presenter: BookListPresenter {
