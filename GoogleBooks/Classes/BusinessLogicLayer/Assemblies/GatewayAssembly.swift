@@ -17,7 +17,8 @@ final class GatewayAssembly: Assembly {
             init: BooksGatewayImpl(
                 requestConfigurator: self.componentAssembly.restRequestConfigurator,
                 networkClient: self.componentAssembly.networkClient,
-                jsonMapper: self.componentAssembly.bookResponseMapper
+                jsonMapper: self.componentAssembly.bookResponseMapper,
+                persistanceManager: self.componentAssembly.userDefaultsPersistanceManager
             ),
             inject: nil
         )

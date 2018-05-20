@@ -20,4 +20,7 @@ protocol BooksGateway {
     ///
     /// - parameter books: Book list
     func saveBooksToCache(_ books: [Book])
+
+    /// Returns book list from cache
+    func getBooksFromCache() -> [Book]
 }
