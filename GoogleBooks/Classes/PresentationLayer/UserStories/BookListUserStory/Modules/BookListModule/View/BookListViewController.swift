@@ -57,6 +57,13 @@ final class BookListViewController: UIViewController {
 // MARK: - BooksListView
 
 extension BookListViewController: BookListView {}
+// MARK: - BookListDisplayManagerDelegate
+
+extension BookListViewController: BookListDisplayManagerDelegate {
+    func didTapCell(with book: Book) {
+
+    }
+}
 
 // MARK: - UISearchBarDelegate
 
