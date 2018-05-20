@@ -14,7 +14,12 @@ final class BookTableViewCell: UITableViewCell, NibLoadable {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var publishedDateLabel: UILabel!
 
-    static var cellIdentifier = "BookTableViewCell"
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+        thumbnailImageView.kf.cancelDownloadTask()
+        thumbnailImageView.image = nil
+    }
 
     func update(with cellObject: BookCellObject) {
         thumbnailImageView.kf.setImage(with: cellObject.thumbnail, options: [.transition(.fade(0.2))])
