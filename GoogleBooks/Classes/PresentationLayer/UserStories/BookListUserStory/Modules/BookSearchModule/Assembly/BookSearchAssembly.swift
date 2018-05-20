@@ -10,6 +10,7 @@ import EasyDi
 
 final class BookSearchAssembly: Assembly {
     lazy var useCaseAssembly: UseCaseAssembly = self.context.assembly()
+    lazy var commonComponentsAssembly: CommonComponentAssembly = self.context.assembly()
 
     var view: BookSearchView & TransitionHandler {
         return definePlaceholder()
@@ -27,6 +28,7 @@ final class BookSearchAssembly: Assembly {
     func inject(into viewController: BookSearchViewController) {
         return defineInjection(key: "view", into: viewController) {
             $0.presenter = self.presenter
+            $0.displayManager = self.commonComponentsAssembly.bookListDisplayManager
             return $0
         }
     }
