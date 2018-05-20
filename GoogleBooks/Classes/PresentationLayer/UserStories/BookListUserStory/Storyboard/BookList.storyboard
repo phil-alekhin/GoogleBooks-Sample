@@ -56,7 +56,7 @@
                     <connections>
                         <outlet property="messageView" destination="BsV-8F-Lig" id="yVz-1v-aaH"/>
                         <outlet property="tableView" destination="h9I-vH-iXx" id="zaR-bV-fM2"/>
-                        <segue destination="ATd-b7-UD2" kind="show" id="6kq-R5-rcl"/>
+                        <segue destination="ATd-b7-UD2" kind="show" identifier="BookListToBookSearchSegue" customClass="EmbedViewControllerSegue" customModule="GoogleBooks" customModuleProvider="target" id="6kq-R5-rcl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vxp-6W-Lm9" userLabel="First Responder" sceneMemberID="firstResponder"/>

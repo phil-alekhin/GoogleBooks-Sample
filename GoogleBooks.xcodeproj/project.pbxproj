@@ -51,6 +51,9 @@
 		D4DF061220B1D88E00004248 /* BookListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF061120B1D88E00004248 /* BookListPresenterTests.swift */; };
 		D4DF061520B1D94E00004248 /* GetBooksUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF061420B1D94E00004248 /* GetBooksUseCaseMock.swift */; };
 		D4DF061920B1DD4100004248 /* BookSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF061820B1DD4100004248 /* BookSearchViewController.swift */; };
+		D4DF061D20B1DE0B00004248 /* EmbedViewControllerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF061C20B1DE0B00004248 /* EmbedViewControllerSegue.swift */; };
+		D4DF062020B1DE3A00004248 /* EmbedViewControllerSegueHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF061F20B1DE3A00004248 /* EmbedViewControllerSegueHolder.swift */; };
+		D4DF062220B1DE8400004248 /* BookListSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF062120B1DE8400004248 /* BookListSegue.swift */; };
 		D4FE286F20B05F22006BD145 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE286E20B05F22006BD145 /* Result.swift */; };
 		DD8A65F00C9A9C587576BAAA /* Pods_GoogleBooksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 197282DCA0141609A2288D5D /* Pods_GoogleBooksTests.framework */; };
 /* End PBXBuildFile section */
@@ -118,6 +121,9 @@
 		D4DF061120B1D88E00004248 /* BookListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListPresenterTests.swift; sourceTree = "<group>"; };
 		D4DF061420B1D94E00004248 /* GetBooksUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBooksUseCaseMock.swift; sourceTree = "<group>"; };
 		D4DF061820B1DD4100004248 /* BookSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchViewController.swift; sourceTree = "<group>"; };
+		D4DF061C20B1DE0B00004248 /* EmbedViewControllerSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbedViewControllerSegue.swift; sourceTree = "<group>"; };
+		D4DF061F20B1DE3A00004248 /* EmbedViewControllerSegueHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbedViewControllerSegueHolder.swift; sourceTree = "<group>"; };
+		D4DF062120B1DE8400004248 /* BookListSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListSegue.swift; sourceTree = "<group>"; };
 		D4FE286E20B05F22006BD145 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		E89A37EC8C6E66A808D03549 /* Pods_GoogleBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -352,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				D444D70D20B0BF56003F4BC9 /* BookList.storyboard */,
+				D4DF062120B1DE8400004248 /* BookListSegue.swift */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -443,6 +450,7 @@
 		D4972D1720AF473C006E5144 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				D4DF061B20B1DDF400004248 /* Common */,
 				D4DF060920B1CCC100004248 /* Assemblies */,
 				D4DF060420B1C50A00004248 /* Helpers */,
 				D4DE11A720B17ADA0011FC1C /* Extensions */,
@@ -628,6 +636,23 @@
 				D4DF061820B1DD4100004248 /* BookSearchViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D4DF061B20B1DDF400004248 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D4DF061E20B1DE2200004248 /* EmbedViewControllerSegue */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D4DF061E20B1DE2200004248 /* EmbedViewControllerSegue */ = {
+			isa = PBXGroup;
+			children = (
+				D4DF061C20B1DE0B00004248 /* EmbedViewControllerSegue.swift */,
+				D4DF061F20B1DE3A00004248 /* EmbedViewControllerSegueHolder.swift */,
+			);
+			path = EmbedViewControllerSegue;
 			sourceTree = "<group>";
 		};
 		D4FE286D20B05F0B006BD145 /* GetBooksUseCase */ = {
@@ -852,17 +877,20 @@
 			files = (
 				D4DF060820B1CA9B00004248 /* BookCellObjectFactory.swift in Sources */,
 				D444D71B20B0C34A003F4BC9 /* BookListAssembly.swift in Sources */,
+				D4DF062220B1DE8400004248 /* BookListSegue.swift in Sources */,
 				D4DE11A420B170E90011FC1C /* BookListDisplayManager.swift in Sources */,
 				D4DF060B20B1CE0700004248 /* HelpersAssembly.swift in Sources */,
 				D4DF060620B1C51A00004248 /* DatesFormatter.swift in Sources */,
 				D4197B9320B06FE60031146D /* RESTRequestConfigurator.swift in Sources */,
 				D4197B8A20B06E0A0031146D /* RequestConfigurator.swift in Sources */,
 				D444D6F020B074F5003F4BC9 /* BookListResponse.swift in Sources */,
+				D4DF061D20B1DE0B00004248 /* EmbedViewControllerSegue.swift in Sources */,
 				D4197B8D20B06E5E0031146D /* RequestDataModel.swift in Sources */,
 				D4951C7E20AF57EE00007A01 /* Book.swift in Sources */,
 				D444D71420B0C1A8003F4BC9 /* BookListPresenter.swift in Sources */,
 				D444D70720B0BCCE003F4BC9 /* UseCaseAssembly.swift in Sources */,
 				D4197B8320B06AB10031146D /* CommonNetworkClient.swift in Sources */,
+				D4DF062020B1DE3A00004248 /* EmbedViewControllerSegueHolder.swift in Sources */,
 				D4DE11A620B174EA0011FC1C /* BookListDisplayManagerDelegate.swift in Sources */,
 				D444D6F920B086D5003F4BC9 /* ComponentAssembly.swift in Sources */,
 				D444D71820B0C1FE003F4BC9 /* BookListView.swift in Sources */,
