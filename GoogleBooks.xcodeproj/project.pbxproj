@@ -43,6 +43,7 @@
 		D4BEE58D20B2085D00CE5E44 /* BookDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BEE58C20B2085D00CE5E44 /* BookDetailsView.swift */; };
 		D4BEE58F20B208D100CE5E44 /* BookDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BEE58E20B208D100CE5E44 /* BookDetailsPresenter.swift */; };
 		D4BEE59120B2090800CE5E44 /* BookDetailsPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BEE59020B2090800CE5E44 /* BookDetailsPresenterImpl.swift */; };
+		D4BEE59420B209A300CE5E44 /* BookDetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BEE59320B209A300CE5E44 /* BookDetailsAssembly.swift */; };
 		D4DE11A120B167560011FC1C /* BookCellObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DE11A020B167560011FC1C /* BookCellObject.swift */; };
 		D4DE11A420B170E90011FC1C /* BookListDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DE11A320B170E90011FC1C /* BookListDisplayManager.swift */; };
 		D4DE11A620B174EA0011FC1C /* BookListDisplayManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DE11A520B174EA0011FC1C /* BookListDisplayManagerDelegate.swift */; };
@@ -135,6 +136,7 @@
 		D4BEE58C20B2085D00CE5E44 /* BookDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsView.swift; sourceTree = "<group>"; };
 		D4BEE58E20B208D100CE5E44 /* BookDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsPresenter.swift; sourceTree = "<group>"; };
 		D4BEE59020B2090800CE5E44 /* BookDetailsPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsPresenterImpl.swift; sourceTree = "<group>"; };
+		D4BEE59320B209A300CE5E44 /* BookDetailsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsAssembly.swift; sourceTree = "<group>"; };
 		D4DE11A020B167560011FC1C /* BookCellObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellObject.swift; sourceTree = "<group>"; };
 		D4DE11A320B170E90011FC1C /* BookListDisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListDisplayManager.swift; sourceTree = "<group>"; };
 		D4DE11A520B174EA0011FC1C /* BookListDisplayManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListDisplayManagerDelegate.swift; sourceTree = "<group>"; };
@@ -593,6 +595,14 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		D4BEE59220B2099300CE5E44 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				D4BEE59320B209A300CE5E44 /* BookDetailsAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		D4DE11A720B17ADA0011FC1C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -810,6 +820,7 @@
 		D4DF065620B2075E00004248 /* BookDetails */ = {
 			isa = PBXGroup;
 			children = (
+				D4BEE59220B2099300CE5E44 /* Assembly */,
 				D4BEE58B20B2084900CE5E44 /* Presenter */,
 				D4DF065720B2076800004248 /* View */,
 			);
@@ -1105,6 +1116,7 @@
 				D4DF061920B1DD4100004248 /* BookSearchViewController.swift in Sources */,
 				D444D71120B0BF86003F4BC9 /* BookListViewController.swift in Sources */,
 				D4BEE59120B2090800CE5E44 /* BookDetailsPresenterImpl.swift in Sources */,
+				D4BEE59420B209A300CE5E44 /* BookDetailsAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
