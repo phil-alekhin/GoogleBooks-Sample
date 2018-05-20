@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct Book: Equatable, Decodable {
-    struct BookThumbnails: Equatable, Decodable {
+struct Book: Equatable, Codable {
+    struct BookThumbnails: Equatable, Codable {
         let smallThumbnail: URL
         let thumbnail: URL
     }
