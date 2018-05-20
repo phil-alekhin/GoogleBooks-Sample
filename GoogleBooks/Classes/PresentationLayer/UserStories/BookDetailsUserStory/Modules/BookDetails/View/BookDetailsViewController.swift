@@ -9,6 +9,7 @@
 import UIKit
 
 final class BookDetailsViewController: UIViewController {
+    var presenter: BookDetailsPresenter!
 
     // MARK: IBOutlets
 
@@ -18,6 +19,7 @@ final class BookDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewReady()
     }
 }
 
