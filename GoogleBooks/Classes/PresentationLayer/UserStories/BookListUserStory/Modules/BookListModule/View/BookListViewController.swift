@@ -22,6 +22,7 @@ final class BookListViewController: UIViewController {
     // MARK: IBOutlets
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var messageView: UIView!
 
     // MARK: Lifecycle
 
@@ -58,13 +59,23 @@ final class BookListViewController: UIViewController {
 // MARK: - BooksListView
 
 extension BookListViewController: BookListView {
+    func showEmptyState() {
+        tableView.isHidden = true
+        messageView.isHidden = false
+    }
+
     func show(_ books: [Book]) {
+        tableView.isHidden = false
+        messageView.isHidden = true
+
         tableView.register(BookTableViewCell.cellNib, forCellReuseIdentifier: BookTableViewCell.cellIdentifier)
         tableView.dataSource = displayManager
         tableView.delegate = displayManager
 
         displayManager.setup(with: tableView, books: books)
         displayManager.delegate = self
+
+        tableView.reloadData()
     }
 }
 

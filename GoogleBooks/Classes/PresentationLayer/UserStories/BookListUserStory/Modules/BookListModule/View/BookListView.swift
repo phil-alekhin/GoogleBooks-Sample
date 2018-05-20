@@ -7,5 +7,9 @@
 //
 
 protocol BookListView: class {
+    /// Triggers a view to show empty state
+    func showEmptyState()
+
+    /// Triggers a view to show an array of books
     func show(_ books: [Book])
 }
