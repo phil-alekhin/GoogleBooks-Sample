@@ -11,6 +11,17 @@ import UIKit
 final class BookListViewController: UIViewController {
     var presenter: BookListPresenter!
 
+    var searchController: UISearchController!
+    var searchResultsController: UIViewController? {
+        didSet {
+            setupSearchController()
+        }
+    }
+
+    // MARK: IBOutlets
+
+    @IBOutlet weak var tableView: UITableView!
+
     // MARK: Lifecycle
 
     override func awakeFromNib() {
@@ -22,8 +33,31 @@ final class BookListViewController: UIViewController {
         super.viewDidLoad()
         presenter.viewReady()
     }
+
+    private func setupSearchController() {
+        searchController = UISearchController(searchResultsController: searchResultsController)
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = true
+
+        searchController.searchBar.placeholder = "Search for books"
+        searchController.searchBar.delegate = self
+
+        if #available(iOS 11.0, *) {
+            navigationItem.largeTitleDisplayMode = .never
+            navigationItem.searchController = searchController
+            navigationItem.hidesSearchBarWhenScrolling = false
+        } else {
+            tableView.tableHeaderView = searchController.searchBar
+        }
+
+        definesPresentationContext = true
+    }
 }
 
 // MARK: - BooksListView
 
 extension BookListViewController: BookListView {}
+
+// MARK: - UISearchBarDelegate
+
+extension BookListViewController: UISearchBarDelegate {}
