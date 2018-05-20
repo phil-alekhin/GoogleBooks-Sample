@@ -12,7 +12,7 @@ final class BookListAssembly: Assembly {
     lazy var useCaseAssembly: UseCaseAssembly = self.context.assembly()
     lazy var helpersAssembly: HelpersAssembly = self.context.assembly()
 
-    var view: BookListView {
+    var view: BookListView & TransitionHandler {
         return definePlaceholder()
     }
 
@@ -36,7 +36,11 @@ final class BookListAssembly: Assembly {
     }
 
     var router: BookListRouter {
-        return define(init: BookListRouterImpl())
+        return define(
+            init: BookListRouterImpl(
+                transitionHandler: self.view
+            )
+        )
     }
 
     func inject(into viewController: BookListViewController) {

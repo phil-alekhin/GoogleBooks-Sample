@@ -7,7 +7,13 @@
 //
 
 final class BookListRouterImpl: BookListRouter {
-    func loadBookSearchModule() {
+    private weak var transitionHandler: TransitionHandler?
 
+    init(transitionHandler: TransitionHandler) {
+        self.transitionHandler = transitionHandler
+    }
+
+    func loadBookSearchModule() {
+        transitionHandler?.performSegue(with: BookListSegue.bookListToBookSearch)
     }
 }

@@ -20,6 +20,8 @@ final class BookListPresenterImpl: BookListPresenter {
     }
 
     func viewReady() {
+        router.loadBookSearchModule()
+
         let cachedBooks = getBooksUseCase.getBooksFromCache()
         if cachedBooks.isEmpty {
             view?.showEmptyState()
