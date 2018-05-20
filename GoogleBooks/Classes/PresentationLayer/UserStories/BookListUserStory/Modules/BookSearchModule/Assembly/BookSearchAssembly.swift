@@ -1,42 +1,40 @@
 //
-//  BookListAssembly.swift
+//  BookSearchAssembly.swift
 //  GoogleBooks
 //
-//  Created by Philip Alekhin on 19/05/2018.
+//  Created by Philip Alekhin on 20/05/2018.
 //  Copyright © 2018 Philip Alekhin. All rights reserved.
 //
 
 import EasyDi
 
-final class BookListAssembly: Assembly {
+final class BookSearchAssembly: Assembly {
     lazy var useCaseAssembly: UseCaseAssembly = self.context.assembly()
-    lazy var helpersAssembly: HelpersAssembly = self.context.assembly()
     lazy var commonComponentsAssembly: CommonComponentAssembly = self.context.assembly()
 
-    var view: BookListView & TransitionHandler {
+    var view: BookSearchView & TransitionHandler {
         return definePlaceholder()
     }
 
-    var presenter: BookListPresenter {
+    var presenter: BookSearchPresenter {
         return define(
-            init: BookListPresenterImpl(
+            init: BookSearchPresenterImpl(
                 view: self.view,
                 router: self.router,
                 getBooksUseCase: self.useCaseAssembly.booksGateway
-            ),
-            inject: nil
+            )
         )
     }
 
-    var router: BookListRouter {
+    var router: BookSearchRouter {
         return define(
-            init: BookListRouterImpl(
+            init: BookSearchRouterImpl(
                 transitionHandler: self.view
             )
         )
     }
 
-    func inject(into viewController: BookListViewController) {
+    func inject(into viewController: BookSearchViewController) {
         return defineInjection(key: "view", into: viewController) {
             $0.presenter = self.presenter
             $0.displayManager = self.commonComponentsAssembly.bookListDisplayManager

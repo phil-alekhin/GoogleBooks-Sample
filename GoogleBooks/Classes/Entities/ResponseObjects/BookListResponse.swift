@@ -15,7 +15,7 @@ struct BookListResponse: Decodable {
         }
     }
 
-    let volumes: [Volume]
+    var volumes: [Volume]? = []
 
     enum CodingKeys: String, CodingKey {
         case volumes = "items"

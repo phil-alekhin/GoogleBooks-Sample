@@ -9,4 +9,7 @@
 protocol BookListPresenter {
     /// Informs presenter that a view ready
     func viewReady()
+
+    /// Notify presenter that a user has change a search string
+    func didChangeSearchBar(with queryString: String)
 }
