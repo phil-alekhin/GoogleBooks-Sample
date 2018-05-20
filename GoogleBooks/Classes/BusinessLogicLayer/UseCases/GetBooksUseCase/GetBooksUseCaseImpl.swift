@@ -20,4 +20,8 @@ final class GetBooksUseCaseImpl: GetBooksUseCase {
             completionHandler(result)
         }
     }
+
+    func getBooksFromCache() -> [Book] {
+        return []
+    }
 }

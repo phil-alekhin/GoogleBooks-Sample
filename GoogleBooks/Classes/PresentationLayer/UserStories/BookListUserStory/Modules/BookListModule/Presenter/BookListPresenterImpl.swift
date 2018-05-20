@@ -18,6 +18,11 @@ final class BookListPresenterImpl: BookListPresenter {
     }
 
     func viewReady() {
-
+        let cachedBooks = getBooksUseCase.getBooksFromCache()
+        if cachedBooks.isEmpty {
+            view?.showEmptyState()
+        } else {
+            view?.show(cachedBooks)
+        }
     }
 }
