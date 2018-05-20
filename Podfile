@@ -9,6 +9,9 @@ target 'GoogleBooks' do
   # Dependency managment
   pod 'EasyDi'
 
+ # Persistence managment
+ pod 'DefaultsKit'
+
   # Tools
   pod 'SwiftLint'
 
