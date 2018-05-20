@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class BookTableViewCell: UITableViewCell, NibLoadable {
     @IBOutlet var thumbnailImageView: UIImageView!
@@ -16,6 +17,7 @@ final class BookTableViewCell: UITableViewCell, NibLoadable {
     static var cellIdentifier = "BookTableViewCell"
 
     func update(with cellObject: BookCellObject) {
+        thumbnailImageView.kf.setImage(with: cellObject.thumbnail, options: [.transition(.fade(0.2))])
         titleLabel.text = cellObject.title
         publishedDateLabel.text = cellObject.publishedDate
     }
