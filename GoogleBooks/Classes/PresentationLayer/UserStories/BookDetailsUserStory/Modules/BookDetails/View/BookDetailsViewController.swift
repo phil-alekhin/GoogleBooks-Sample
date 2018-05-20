@@ -35,3 +35,12 @@ extension BookDetailsViewController: BookDetailsView {
 
     }
 }
+
+// MARK: - ModuleInputProvider
+
+extension BookDetailsViewController: ModuleInputProvider {
+    var moduleInput: ModuleInput? {
+        // switlint:disable force_cast
+        return presenter as? ModuleInput
+    }
+}
