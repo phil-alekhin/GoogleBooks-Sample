@@ -10,6 +10,7 @@ import UIKit
 
 final class BookListViewController: UIViewController {
     var presenter: BookListPresenter!
+    var displayManager: BookListDisplayManager!
 
     var searchController: UISearchController!
     var searchResultsController: UIViewController? {
@@ -56,7 +57,16 @@ final class BookListViewController: UIViewController {
 
 // MARK: - BooksListView
 
-extension BookListViewController: BookListView {}
+extension BookListViewController: BookListView {
+    func show(_ books: [Book]) {
+        tableView.dataSource = displayManager
+        tableView.delegate = displayManager
+
+        displayManager.setup(with: tableView, books: books)
+        displayManager.delegate = self
+    }
+}
+
 // MARK: - BookListDisplayManagerDelegate
 
 extension BookListViewController: BookListDisplayManagerDelegate {
