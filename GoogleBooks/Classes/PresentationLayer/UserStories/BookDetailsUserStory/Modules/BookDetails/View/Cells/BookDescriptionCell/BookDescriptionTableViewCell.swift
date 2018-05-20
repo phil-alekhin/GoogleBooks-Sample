@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class BookDescriptionTableViewCell: UITableViewCell {
+final class BookDescriptionTableViewCell: UITableViewCell, NibLoadable {
     @IBOutlet weak var descriptionLabel: UILabel!
 
     func update(with cellObject: BookDescriptionCellObject) {
