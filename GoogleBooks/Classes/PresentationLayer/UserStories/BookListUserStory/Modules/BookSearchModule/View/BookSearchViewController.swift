@@ -14,6 +14,7 @@ final class BookSearchViewController: UIViewController {
     // MARK: - IBOutlets
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     // MARK: - Lifecycle
 
@@ -29,7 +30,18 @@ final class BookSearchViewController: UIViewController {
 
 // MARK: - BookSearchView
 
-extension BookSearchViewController: BookSearchView {}
+extension BookSearchViewController: BookSearchView {
+    func updateLoadingState(isLoading: Bool) {
+        if isLoading {
+            tableView.isHidden = true
+            activityIndicator.startAnimating()
+            return
+        }
+
+        tableView.isHidden = false
+        activityIndicator.stopAnimating()
+    }
+}
 
 // MARK: - ModuleInputProvider
 

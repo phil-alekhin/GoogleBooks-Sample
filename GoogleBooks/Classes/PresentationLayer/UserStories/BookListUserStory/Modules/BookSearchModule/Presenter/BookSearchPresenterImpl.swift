@@ -33,8 +33,9 @@ extension BookSearchPresenterImpl: BookSearchModuleInput {
     }
 
     func update(with searchString: String) {
-        getBooksUseCase.getBooks(queryString: searchString) { _ in
-
+        view?.updateLoadingState(isLoading: true)
+        getBooksUseCase.getBooks(queryString: searchString) { [weak view] _ in
+            view?.updateLoadingState(isLoading: false)
         }
     }
 }

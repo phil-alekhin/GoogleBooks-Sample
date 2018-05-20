@@ -9,5 +9,5 @@
 import Foundation
 
 protocol BookSearchView: class {
-
+    func updateLoadingState(isLoading: Bool)
 }
