@@ -11,10 +11,12 @@ import Foundation
 final class BookSearchPresenterImpl: BookSearchPresenter {
     private weak var view: BookSearchView?
     private weak var moduleOutput: BookSearchModuleOutput?
+    private let router: BookSearchRouter
     private let getBooksUseCase: GetBooksUseCase
 
-    init(view: BookSearchView, getBooksUseCase: GetBooksUseCase) {
+    init(view: BookSearchView, router: BookSearchRouter, getBooksUseCase: GetBooksUseCase) {
         self.view = view
+        self.router = router
         self.getBooksUseCase = getBooksUseCase
     }
 
@@ -34,14 +36,14 @@ extension BookSearchPresenterImpl: BookSearchModuleInput {
 
     func update(with searchString: String) {
         view?.updateLoadingState(isLoading: true)
-        getBooksUseCase.getBooks(queryString: searchString) { [weak view] result in
+        getBooksUseCase.getBooks(queryString: searchString) { [weak view, router] result in
             view?.updateLoadingState(isLoading: false)
 
             switch result {
             case .success(let books):
                 view?.updateView(with: books)
-            default:
-                break
+            case .failure(let error):
+                router.showError(with: error.localizedDescription)
             }
         }
     }

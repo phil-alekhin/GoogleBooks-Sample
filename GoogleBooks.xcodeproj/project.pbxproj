@@ -66,6 +66,8 @@
 		D4DF063920B1E55800004248 /* BookSearchModuleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF063820B1E55800004248 /* BookSearchModuleIO.swift */; };
 		D4DF063C20B1E7D400004248 /* BookSearchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF063B20B1E7D400004248 /* BookSearchAssembly.swift */; };
 		D4DF064120B1EE8600004248 /* CommonComponentAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF064020B1EE8600004248 /* CommonComponentAssembly.swift */; };
+		D4DF064420B1F13D00004248 /* BookSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF064320B1F13D00004248 /* BookSearchRouter.swift */; };
+		D4DF064620B1F15C00004248 /* BookSearchRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF064520B1F15C00004248 /* BookSearchRouterImpl.swift */; };
 		D4FE286F20B05F22006BD145 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE286E20B05F22006BD145 /* Result.swift */; };
 		DD8A65F00C9A9C587576BAAA /* Pods_GoogleBooksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 197282DCA0141609A2288D5D /* Pods_GoogleBooksTests.framework */; };
 /* End PBXBuildFile section */
@@ -148,6 +150,8 @@
 		D4DF063820B1E55800004248 /* BookSearchModuleIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchModuleIO.swift; sourceTree = "<group>"; };
 		D4DF063B20B1E7D400004248 /* BookSearchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchAssembly.swift; sourceTree = "<group>"; };
 		D4DF064020B1EE8600004248 /* CommonComponentAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonComponentAssembly.swift; sourceTree = "<group>"; };
+		D4DF064320B1F13D00004248 /* BookSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchRouter.swift; sourceTree = "<group>"; };
+		D4DF064520B1F15C00004248 /* BookSearchRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchRouterImpl.swift; sourceTree = "<group>"; };
 		D4FE286E20B05F22006BD145 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		E89A37EC8C6E66A808D03549 /* Pods_GoogleBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -624,6 +628,7 @@
 		D4DF061620B1DCA100004248 /* BookSearchModule */ = {
 			isa = PBXGroup;
 			children = (
+				D4DF064220B1F12E00004248 /* Router */,
 				D4DF063A20B1E7BC00004248 /* Assembly */,
 				D4DF063120B1E29400004248 /* Presenter */,
 				D4DF061720B1DCA900004248 /* View */,
@@ -721,6 +726,15 @@
 				D4DE11A020B167560011FC1C /* BookCellObject.swift */,
 			);
 			path = CellObjects;
+			sourceTree = "<group>";
+		};
+		D4DF064220B1F12E00004248 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D4DF064320B1F13D00004248 /* BookSearchRouter.swift */,
+				D4DF064520B1F15C00004248 /* BookSearchRouterImpl.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		D4FE286D20B05F0B006BD145 /* GetBooksUseCase */ = {
@@ -960,6 +974,7 @@
 				D4951C7E20AF57EE00007A01 /* Book.swift in Sources */,
 				D4DF062720B1DF6000004248 /* BookListRouterImpl.swift in Sources */,
 				D4DF063020B1E05500004248 /* UIViewController + Swizzle.swift in Sources */,
+				D4DF064420B1F13D00004248 /* BookSearchRouter.swift in Sources */,
 				D444D71420B0C1A8003F4BC9 /* BookListPresenter.swift in Sources */,
 				D444D70720B0BCCE003F4BC9 /* UseCaseAssembly.swift in Sources */,
 				D4197B8320B06AB10031146D /* CommonNetworkClient.swift in Sources */,
@@ -985,6 +1000,7 @@
 				D4197B8020B06A770031146D /* ServerResponseModel.swift in Sources */,
 				D4DE11A120B167560011FC1C /* BookCellObject.swift in Sources */,
 				D4197B7D20B06A500031146D /* NetworkClient.swift in Sources */,
+				D4DF064620B1F15C00004248 /* BookSearchRouterImpl.swift in Sources */,
 				D4197B9020B06F000031146D /* HTTPMethod.swift in Sources */,
 				D49ADAA020AF41AD0093F36D /* AppDelegate.swift in Sources */,
 				D4197B7820B064910031146D /* BooksGateway.swift in Sources */,

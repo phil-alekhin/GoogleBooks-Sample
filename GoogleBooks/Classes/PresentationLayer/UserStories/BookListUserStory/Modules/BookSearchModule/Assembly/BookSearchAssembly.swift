@@ -20,7 +20,16 @@ final class BookSearchAssembly: Assembly {
         return define(
             init: BookSearchPresenterImpl(
                 view: self.view,
+                router: self.router,
                 getBooksUseCase: self.useCaseAssembly.booksGateway
+            )
+        )
+    }
+
+    var router: BookSearchRouter {
+        return define(
+            init: BookSearchRouterImpl(
+                transitionHandler: self.view
             )
         )
     }

@@ -11,7 +11,7 @@ import UIKit
 final class BookSearchViewController: UIViewController {
     var presenter: BookSearchPresenter!
     var displayManager: BookListDisplayManager!
-    
+
     // MARK: - IBOutlets
 
     @IBOutlet weak var tableView: UITableView! {
