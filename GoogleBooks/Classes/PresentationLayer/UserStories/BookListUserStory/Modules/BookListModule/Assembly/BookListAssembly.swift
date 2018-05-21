@@ -22,7 +22,7 @@ final class BookListAssembly: Assembly {
             init: BookListPresenterImpl(
                 view: self.view,
                 router: self.router,
-                getBooksUseCase: self.useCaseAssembly.booksGateway
+                getBooksUseCase: self.useCaseAssembly.getBooksUseCase
             ),
             inject: nil
         )

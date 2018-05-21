@@ -21,7 +21,7 @@ final class BookSearchAssembly: Assembly {
             init: BookSearchPresenterImpl(
                 view: self.view,
                 router: self.router,
-                getBooksUseCase: self.useCaseAssembly.booksGateway,
+                getBooksUseCase: self.useCaseAssembly.getBooksUseCase,
                 saveBooksUseCase: self.useCaseAssembly.saveBooksUseCase
             )
         )
