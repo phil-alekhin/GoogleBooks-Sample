@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fr0-kN-pNx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Books-->
+        <scene sceneID="hdy-3n-Or6">
+            <objects>
+                <viewController title="Books" automaticallyAdjustsScrollViewInsets="NO" id="fr0-kN-pNx" customClass="BookListViewController" customModule="GoogleBooks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8ZB-0k-i5Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h9I-vH-iXx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BsV-8F-Lig">
+                                <rect key="frame" x="0.0" y="240.5" width="375" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try to find some book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooo-Td-Mve">
+                                        <rect key="frame" x="77" y="110.5" width="221.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="GmH-S4-SaB"/>
+                                    <constraint firstItem="ooo-Td-Mve" firstAttribute="centerX" secondItem="BsV-8F-Lig" secondAttribute="centerX" id="jCb-TZ-tLN"/>
+                                    <constraint firstItem="ooo-Td-Mve" firstAttribute="centerY" secondItem="BsV-8F-Lig" secondAttribute="centerY" id="k2Z-Bu-1w0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BsV-8F-Lig" firstAttribute="trailing" secondItem="Gbk-31-yeJ" secondAttribute="trailing" id="61a-uY-meQ"/>
+                            <constraint firstItem="BsV-8F-Lig" firstAttribute="centerY" secondItem="Gbk-31-yeJ" secondAttribute="centerY" id="FOp-db-dbs"/>
+                            <constraint firstItem="h9I-vH-iXx" firstAttribute="top" secondItem="Gbk-31-yeJ" secondAttribute="top" id="UfJ-OF-x3X"/>
+                            <constraint firstItem="BsV-8F-Lig" firstAttribute="leading" secondItem="Gbk-31-yeJ" secondAttribute="leading" id="WTI-9F-HQK"/>
+                            <constraint firstItem="h9I-vH-iXx" firstAttribute="leading" secondItem="Gbk-31-yeJ" secondAttribute="leading" id="nKU-df-Wnv"/>
+                            <constraint firstItem="Gbk-31-yeJ" firstAttribute="trailing" secondItem="h9I-vH-iXx" secondAttribute="trailing" id="pqs-ZN-eqZ"/>
+                            <constraint firstAttribute="bottom" secondItem="h9I-vH-iXx" secondAttribute="bottom" id="xB3-g4-DWM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gbk-31-yeJ"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="messageView" destination="BsV-8F-Lig" id="yVz-1v-aaH"/>
+                        <outlet property="tableView" destination="h9I-vH-iXx" id="zaR-bV-fM2"/>
+                        <segue destination="ATd-b7-UD2" kind="show" identifier="BookListToBookSearchSegue" customClass="EmbedViewControllerSegue" customModule="GoogleBooks" customModuleProvider="target" id="6kq-R5-rcl"/>
+                        <segue destination="8dM-j6-0gl" kind="show" identifier="BookListToBookDetailsSegue" id="KuS-y9-b7j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vxp-6W-Lm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="143" y="72"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="O6F-y8-flf">
+            <objects>
+                <viewController title="Search" id="ATd-b7-UD2" customClass="BookSearchViewController" customModule="GoogleBooks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kvD-yW-9Jr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YX0-xG-fsN">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbJ-xh-egS">
+                                <rect key="frame" x="0.0" y="290.5" width="375" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No books found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zef-OX-grI">
+                                        <rect key="frame" x="106.5" y="61" width="163.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="zef-OX-grI" firstAttribute="centerX" secondItem="gbJ-xh-egS" secondAttribute="centerX" id="gwt-13-duX"/>
+                                    <constraint firstItem="zef-OX-grI" firstAttribute="centerY" secondItem="gbJ-xh-egS" secondAttribute="centerY" id="loJ-0p-a5H"/>
+                                    <constraint firstAttribute="height" constant="150" id="sii-Qq-sFp"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Mkb-nz-kkp">
+                                <rect key="frame" x="169" y="347" width="37" height="37"/>
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QJm-hU-1JM" firstAttribute="trailing" secondItem="YX0-xG-fsN" secondAttribute="trailing" id="0ba-Hu-Wiw"/>
+                            <constraint firstItem="Mkb-nz-kkp" firstAttribute="centerX" secondItem="QJm-hU-1JM" secondAttribute="centerX" id="0qP-ag-Rbg"/>
+                            <constraint firstItem="YX0-xG-fsN" firstAttribute="leading" secondItem="QJm-hU-1JM" secondAttribute="leading" id="9yf-aE-fzY"/>
+                            <constraint firstItem="gbJ-xh-egS" firstAttribute="leading" secondItem="QJm-hU-1JM" secondAttribute="leading" id="BJj-t4-6YZ"/>
+                            <constraint firstAttribute="bottom" secondItem="YX0-xG-fsN" secondAttribute="bottom" id="QMf-52-xOW"/>
+                            <constraint firstItem="Mkb-nz-kkp" firstAttribute="centerY" secondItem="QJm-hU-1JM" secondAttribute="centerY" id="SQS-MT-CTG"/>
+                            <constraint firstItem="YX0-xG-fsN" firstAttribute="top" secondItem="QJm-hU-1JM" secondAttribute="top" id="Sjj-mD-wQB"/>
+                            <constraint firstItem="gbJ-xh-egS" firstAttribute="centerY" secondItem="QJm-hU-1JM" secondAttribute="centerY" id="eN5-56-8gq"/>
+                            <constraint firstItem="QJm-hU-1JM" firstAttribute="trailing" secondItem="gbJ-xh-egS" secondAttribute="trailing" id="qnP-1T-oYv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QJm-hU-1JM"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Mkb-nz-kkp" id="SBW-Yu-vsf"/>
+                        <outlet property="messageView" destination="gbJ-xh-egS" id="BWS-ys-kSG"/>
+                        <outlet property="tableView" destination="YX0-xG-fsN" id="qSD-ZQ-KcX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S6a-Mf-OJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1033" y="-280"/>
+        </scene>
+        <!--BookDetails-->
+        <scene sceneID="47A-Em-yX7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BookDetails" id="8dM-j6-0gl" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qr3-cq-OX6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="817" y="303"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,89 @@
+//
+//  BookListPresenterTests.swift
+//  GoogleBooksTests
+//
+//  Created by Philip Alekhin on 20/05/2018.
+//  Copyright © 2018 Philip Alekhin. All rights reserved.
+//
+
+import XCTest
+@testable import GoogleBooks
+
+class BookListPresenterTests: XCTestCase {
+    var presenter: BookListPresenterImpl!
+    var viewMock: BookListViewMock!
+    var routerMock: BookListRouterMock!
+    var getBooksUseCaseMock: GetBooksUseCaseMock!
+
+    override func setUp() {
+        super.setUp()
+
+        getBooksUseCaseMock = GetBooksUseCaseMock()
+        viewMock = BookListViewMock()
+        routerMock = BookListRouterMock()
+        presenter = BookListPresenterImpl(view: viewMock, router: routerMock, getBooksUseCase: getBooksUseCaseMock)
+    }
+
+    func testPresenterTriggersViewToShowEmptyState() {
+        // given
+        getBooksUseCaseMock.getBooksFromCacheReturnValue = []
+
+        // when
+        presenter.viewReady()
+
+        // then
+        XCTAssert(viewMock.showEmptyStateCallsCount == 1)
+    }
+
+    func testPresenterTriggersViewToShowBookList() {
+        // given
+        let expectedBookList = createTestData()
+        getBooksUseCaseMock.getBooksFromCacheReturnValue = expectedBookList
+
+        // when
+        presenter.viewReady()
+
+        // then
+        XCTAssertEqual(viewMock.showBooksRecievedBooks, expectedBookList)
+        XCTAssert(viewMock.showBooksRecievedBooks?.count == 1)
+
+    }
+
+    private func createTestData() -> [Book] {
+        let thumbnails = Book.BookThumbnails(
+            smallThumbnail: URL(fileURLWithPath: ""),
+            thumbnail: URL(fileURLWithPath: "")
+        )
+
+        let book = Book(title: "Some book", thumbnails: thumbnails)
+        return [book]
+    }
+}
+
+// MARK: - Mocks
+
+extension BookListPresenterTests {
+    class BookListViewMock: BookListView {
+        var showEmptyStateCallsCount = 0
+        func showEmptyState() {
+            showEmptyStateCallsCount += 1
+        }
+
+        var showBooksRecievedBooks: [Book]?
+        func show(_ books: [Book]) {
+            showBooksRecievedBooks = books
+        }
+    }
+
+    class BookListRouterMock: BookListRouter {
+        var loadBookSearchModuleModuleOutput: BookSearchModuleOutput?
+        func loadBookSearchModule(with moduleOutput: BookSearchModuleOutput) {
+            loadBookSearchModuleModuleOutput = moduleOutput
+        }
+
+        var showBookDetailsModuleBook: Book?
+        func showBookDetailsModule(with book: Book) {
+            showBookDetailsModuleBook = book
+        }
+    }
+}
