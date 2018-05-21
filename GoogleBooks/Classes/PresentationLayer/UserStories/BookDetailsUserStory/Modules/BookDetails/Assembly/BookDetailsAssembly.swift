@@ -9,8 +9,26 @@
 import EasyDi
 
 final class BookDetailsAssembly: Assembly {
+    lazy var helpersAssembly: HelpersAssembly = self.context.assembly()
+
     var view: BookDetailsView & TransitionHandler {
         return definePlaceholder()
+    }
+
+    var displayManager: BookDetailsDisplayManager {
+        return define(
+            init: BookDetailsDisplayManager(
+                bookDetailsCellObjectFactory: self.cellObjectFactory
+            )
+        )
+    }
+
+    var cellObjectFactory: BookDetailsCellObjectFactory {
+        return define(
+            init: BookDetailsCellObjectFactory(
+                datesFormatter: self.helpersAssembly.datesFormatter
+            )
+        )
     }
 
     var presenter: BookDetailsPresenter {
@@ -24,6 +42,7 @@ final class BookDetailsAssembly: Assembly {
     func inject(into viewController: BookDetailsViewController) {
         return defineInjection(key: "view", into: viewController) {
             $0.presenter = self.presenter
+            $0.displayManager = self.displayManager
             return $0
         }
     }
