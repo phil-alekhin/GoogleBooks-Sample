@@ -10,6 +10,7 @@ import UIKit
 
 final class BookDetailsViewController: UIViewController {
     var presenter: BookDetailsPresenter!
+    var displayManager: BookDetailsDisplayManager!
 
     // MARK: IBOutlets
 
@@ -32,7 +33,27 @@ final class BookDetailsViewController: UIViewController {
 
 extension BookDetailsViewController: BookDetailsView {
     func show(_ book: Book) {
+        tableView.register(
+            BookInfoTableViewCell.cellNib,
+            forCellReuseIdentifier: BookInfoTableViewCell.cellIdentifier
+        )
 
+        tableView.register(
+            BookDescriptionTableViewCell.cellNib,
+            forCellReuseIdentifier: BookDescriptionTableViewCell.cellIdentifier
+        )
+
+        tableView.register(
+            BookPublicationInfoTableViewCell.cellNib,
+            forCellReuseIdentifier: BookPublicationInfoTableViewCell.cellIdentifier
+        )
+
+        tableView.dataSource = displayManager
+        tableView.delegate = displayManager
+        tableView.rowHeight = UITableViewAutomaticDimension
+
+        displayManager.setup(with: book)
+        tableView.reloadData()
     }
 }
 
