@@ -32,11 +32,12 @@ final class BookCellObjectFactory {
     }
 
     private func tryToFormat(publishedDate: String) -> String {
+        let prefix = "Published: "
+
         guard let date = datesFormatter.obtainDate(from: publishedDate) else {
-            return publishedDate
+            return prefix + publishedDate
         }
 
-        let prefix = "Дата публикации: "
         return prefix + datesFormatter.obtainDateWithDayMonthYearFormat(date: date)
     }
 }
