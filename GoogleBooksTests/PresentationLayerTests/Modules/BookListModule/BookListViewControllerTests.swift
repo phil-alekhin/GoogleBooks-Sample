@@ -41,5 +41,15 @@ extension BookListViewControllerTests {
         func viewReady() {
             viewReadyCallsCount += 1
         }
+
+        var didChangeSearchBarQueryString: String?
+        func didChangeSearchBar(with queryString: String) {
+            didChangeSearchBarQueryString = queryString
+        }
+
+        var didSelectCellBook: Book?
+        func didSelectCell(with book: Book) {
+            didSelectCellBook = book
+        }
     }
 }
