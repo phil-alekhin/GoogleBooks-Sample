@@ -11,5 +11,5 @@ import Foundation
 struct BookInfoCellObject {
     let thumbnailUrl: URL?
     let title: String
-    let author: String
+    let author: String?
 }
