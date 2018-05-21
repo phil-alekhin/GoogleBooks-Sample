@@ -55,7 +55,7 @@ final class BookListViewController: UIViewController {
             navigationItem.searchController = searchController
             navigationItem.hidesSearchBarWhenScrolling = false
         } else {
-            tableView.tableHeaderView = searchController.searchBar
+            navigationItem.titleView = searchController.searchBar
         }
 
         definesPresentationContext = true

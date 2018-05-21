@@ -13,7 +13,7 @@
         <!--Books-->
         <scene sceneID="hdy-3n-Or6">
             <objects>
-                <viewController title="Books" id="fr0-kN-pNx" customClass="BookListViewController" customModule="GoogleBooks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Books" automaticallyAdjustsScrollViewInsets="NO" id="fr0-kN-pNx" customClass="BookListViewController" customModule="GoogleBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8ZB-0k-i5Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
