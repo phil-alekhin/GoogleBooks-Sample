@@ -31,6 +31,13 @@ final class BookSearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupInitialState()
+    }
+
+    private func setupInitialState() {
+        tableView.isHidden = true
+        messageView.isHidden = true
+        activityIndicator.stopAnimating()
     }
 }
 
