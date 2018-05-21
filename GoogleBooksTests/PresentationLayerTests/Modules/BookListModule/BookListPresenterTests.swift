@@ -12,6 +12,7 @@ import XCTest
 class BookListPresenterTests: XCTestCase {
     var presenter: BookListPresenterImpl!
     var viewMock: BookListViewMock!
+    var routerMock: BookListRouterMock!
     var getBooksUseCaseMock: GetBooksUseCaseMock!
 
     override func setUp() {
@@ -19,7 +20,8 @@ class BookListPresenterTests: XCTestCase {
 
         getBooksUseCaseMock = GetBooksUseCaseMock()
         viewMock = BookListViewMock()
-        presenter = BookListPresenterImpl(view: viewMock, getBooksUseCase: getBooksUseCaseMock)
+        routerMock = BookListRouterMock()
+        presenter = BookListPresenterImpl(view: viewMock, router: routerMock, getBooksUseCase: getBooksUseCaseMock)
     }
 
     func testPresenterTriggersViewToShowEmptyState() {
@@ -70,6 +72,18 @@ extension BookListPresenterTests {
         var showBooksRecievedBooks: [Book]?
         func show(_ books: [Book]) {
             showBooksRecievedBooks = books
+        }
+    }
+
+    class BookListRouterMock: BookListRouter {
+        var loadBookSearchModuleModuleOutput: BookSearchModuleOutput?
+        func loadBookSearchModule(with moduleOutput: BookSearchModuleOutput) {
+            loadBookSearchModuleModuleOutput = moduleOutput
+        }
+
+        var showBookDetailsModuleBook: Book?
+        func showBookDetailsModule(with book: Book) {
+            showBookDetailsModuleBook = book
         }
     }
 }

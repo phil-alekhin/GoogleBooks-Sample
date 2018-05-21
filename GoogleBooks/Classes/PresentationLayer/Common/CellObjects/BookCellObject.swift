@@ -9,7 +9,7 @@
 import Foundation
 
 struct BookCellObject {
-    let thumbnail: URL
+    var thumbnail: URL?
     let title: String
     let publishedDate: String
     let book: Book

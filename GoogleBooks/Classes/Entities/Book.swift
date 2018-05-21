@@ -21,7 +21,7 @@ struct Book: Equatable, Codable {
     var publisher: String?
     var publishedDate: String?
 
-    let thumbnails: BookThumbnails
+    var thumbnails: BookThumbnails?
 
     enum CodingKeys: String, CodingKey {
         case title
@@ -36,7 +36,7 @@ struct Book: Equatable, Codable {
 // MARK: Additional init method
 
 extension Book {
-    init(title: String, thumbnails: BookThumbnails) {
+    init(title: String, thumbnails: BookThumbnails? = nil) {
         self.title = title
         self.thumbnails = thumbnails
     }

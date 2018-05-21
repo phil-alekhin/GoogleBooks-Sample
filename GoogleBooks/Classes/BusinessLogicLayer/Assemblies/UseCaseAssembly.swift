@@ -11,7 +11,7 @@ import EasyDi
 final class UseCaseAssembly: Assembly {
     lazy var gatewayAssembly: GatewayAssembly = self.context.assembly()
 
-    var booksGateway: GetBooksUseCase {
+    var getBooksUseCase: GetBooksUseCase {
         return define(
             scope: .lazySingleton,
             init: GetBooksUseCaseImpl(
