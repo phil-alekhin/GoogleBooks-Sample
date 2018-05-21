@@ -19,7 +19,7 @@ final class BookDetailsCellObjectFactory {
         var cellObjects = [Any]()
 
         let bookInfoCellObject = BookInfoCellObject(
-            thumbnailUrl: book.thumbnails.thumbnail,
+            thumbnailUrl: book.thumbnails?.thumbnail,
             title: book.title,
             author: book.authors?.first
         )

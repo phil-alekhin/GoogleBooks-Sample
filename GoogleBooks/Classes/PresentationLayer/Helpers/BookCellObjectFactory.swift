@@ -23,7 +23,7 @@ final class BookCellObjectFactory {
             }
 
             return BookCellObject(
-                thumbnail: book.thumbnails.thumbnail,
+                thumbnail: book.thumbnails?.thumbnail,
                 title: book.title,
                 publishedDate: publishedDateString,
                 book: book
