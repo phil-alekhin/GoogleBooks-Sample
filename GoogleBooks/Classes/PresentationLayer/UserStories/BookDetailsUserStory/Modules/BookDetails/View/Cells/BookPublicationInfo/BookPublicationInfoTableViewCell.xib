@@ -19,14 +19,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Published" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfl-A6-W80">
-                        <rect key="frame" x="16" y="16" width="79.5" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Published" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfl-A6-W80">
+                        <rect key="frame" x="16" y="16" width="79.5" height="30.5"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14 April 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5j-WM-gTW">
-                        <rect key="frame" x="16" y="45" width="85" height="17"/>
+                        <rect key="frame" x="16" y="54.5" width="85" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -36,6 +36,7 @@
                     <constraint firstItem="f5j-WM-gTW" firstAttribute="top" secondItem="dfl-A6-W80" secondAttribute="bottom" constant="8" id="4NC-Ra-bRN"/>
                     <constraint firstItem="f5j-WM-gTW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="DGD-sP-Mff"/>
                     <constraint firstItem="dfl-A6-W80" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="MbA-XO-zTC"/>
+                    <constraint firstAttribute="bottom" secondItem="f5j-WM-gTW" secondAttribute="bottom" constant="8" id="jVF-1h-hu6"/>
                     <constraint firstItem="dfl-A6-W80" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="l19-kI-8po"/>
                 </constraints>
             </tableViewCellContentView>
