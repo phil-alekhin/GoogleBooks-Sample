@@ -9,4 +9,7 @@
 protocol BookListRouter {
     /// Initiates loading of BookSearch module
     func loadBookSearchModule(with moduleOutput: BookSearchModuleOutput)
+
+    /// Initiates transition to BookDetails module
+    func showBookDetailsModule(with book: Book)
 }

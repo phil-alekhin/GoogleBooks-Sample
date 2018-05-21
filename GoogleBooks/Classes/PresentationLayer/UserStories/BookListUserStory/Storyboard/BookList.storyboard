@@ -57,6 +57,7 @@
                         <outlet property="messageView" destination="BsV-8F-Lig" id="yVz-1v-aaH"/>
                         <outlet property="tableView" destination="h9I-vH-iXx" id="zaR-bV-fM2"/>
                         <segue destination="ATd-b7-UD2" kind="show" identifier="BookListToBookSearchSegue" customClass="EmbedViewControllerSegue" customModule="GoogleBooks" customModuleProvider="target" id="6kq-R5-rcl"/>
+                        <segue destination="8dM-j6-0gl" kind="show" identifier="BookListToBookDetailsSegue" id="KuS-y9-b7j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vxp-6W-Lm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -120,6 +121,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S6a-Mf-OJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1033" y="-280"/>
+        </scene>
+        <!--BookDetails-->
+        <scene sceneID="47A-Em-yX7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BookDetails" id="8dM-j6-0gl" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qr3-cq-OX6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="817" y="303"/>
         </scene>
     </scenes>
 </document>
